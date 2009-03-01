@@ -1,0 +1,21 @@
+//
+//  MacHelperFunctions.mm
+//  Skyrocket
+//
+//  Created by Nick Zitzmann on 2/25/06.
+//  Copyright 2006 __MyCompanyName__. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "MacHelperFunctions.h"
+
+const char *PathForResourceOfType(char *resourceName, char *type)
+{
+	NSString *resourceNameString = [[NSFileManager defaultManager] stringWithFileSystemRepresentation:resourceName length:strlen(resourceName)];
+	NSString *typeString = [[NSFileManager defaultManager] stringWithFileSystemRepresentation:type length:strlen(type)];
+	NSString *path = [[NSBundle bundleWithIdentifier:@"com.reallyslick.Skyrocket"] pathForResource:resourceNameString ofType:typeString];
+	
+	if (path)
+		return [path fileSystemRepresentation];
+	return NULL;
+}

@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2526610B0607ED6400BC17F8 /* RSSSkyrocketSaverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17BA06068789002931FE /* RSSSkyrocketSaverView.h */; };
+		2526610C0607ED6A00BC17F8 /* RSSSkyrocketSaverView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 25FA17BB06068789002931FE /* RSSSkyrocketSaverView.mm */; };
+		258B563F060D09EA00D90C7E /* ConfigureSheet.nib in Resources */ = {isa = PBXBuildFile; fileRef = 258B563D060D09EA00D90C7E /* ConfigureSheet.nib */; };
+		258B5647060D0A0D00D90C7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 258B5645060D0A0D00D90C7E /* Localizable.strings */; };
+		25FA178B06068515002931FE /* cloudtex.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA178A06068515002931FE /* cloudtex.h */; };
+		25FA178F06068537002931FE /* earthtex.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA178E06068537002931FE /* earthtex.h */; };
+		25FA17930606868F002931FE /* flare.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17920606868F002931FE /* flare.h */; };
+		25FA17970606869E002931FE /* moontex.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17960606869E002931FE /* moontex.h */; };
+		25FA179D060686B4002931FE /* particle.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA179A060686B4002931FE /* particle.h */; };
+		25FA179E060686B4002931FE /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA179B060686B4002931FE /* resource.h */; };
+		25FA179F060686B4002931FE /* rocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA179C060686B4002931FE /* rocket.h */; };
+		25FA17AB060686E3002931FE /* shockwave.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17A6060686E3002931FE /* shockwave.h */; };
+		25FA17AC060686E3002931FE /* Skyrocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25FA17A7060686E3002931FE /* Skyrocket.cpp */; };
+		25FA17AD060686E3002931FE /* Skyrocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17A8060686E3002931FE /* Skyrocket.h */; };
+		25FA17AE060686E3002931FE /* smoke.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17A9060686E3002931FE /* smoke.h */; };
+		25FA17AF060686E3002931FE /* smoketex.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17AA060686E3002931FE /* smoketex.h */; };
+		25FA17B506068704002931FE /* world.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17B406068704002931FE /* world.h */; };
+		25FA17F3060688E2002931FE /* rsDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17ED060688E2002931FE /* rsDefines.h */; };
+		25FA17F4060688E2002931FE /* rsMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17EE060688E2002931FE /* rsMath.h */; };
+		25FB8B0C0606B1920018BAA6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FB8B0B0606B1920018BAA6 /* OpenGL.framework */; };
+		25FB8BFC0606B88C0018BAA6 /* rsVec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25FA17F2060688E2002931FE /* rsVec.cpp */; };
+		25FB8BFD0606B8A20018BAA6 /* rsQuat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25FA17F0060688E2002931FE /* rsQuat.cpp */; };
+		8D255AC70486D3F9007BF209 /* Skyrocket_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCFA80370C50100C91783 /* Skyrocket_Prefix.pch */; };
+		8D255ACA0486D3F9007BF209 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		8D255ACE0486D3F9007BF209 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		8D255ACF0486D3F9007BF209 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F27B2DFFEEEFEF11CA0E56 /* ScreenSaver.framework */; };
+		E00BA3E109AD52EF00B27E07 /* MacHelperFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = E00BA3DF09AD52EF00B27E07 /* MacHelperFunctions.h */; };
+		E00BA3E209AD52EF00B27E07 /* MacHelperFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BA3E009AD52EF00B27E07 /* MacHelperFunctions.m */; };
+		E00BA3F009AD564700B27E07 /* boom1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E00BA3E609AD564700B27E07 /* boom1.wav */; };
+		E00BA3F109AD564700B27E07 /* boom2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E00BA3E709AD564700B27E07 /* boom2.wav */; };
+		E00BA3F209AD564700B27E07 /* boom3.wav in Resources */ = {isa = PBXBuildFile; fileRef = E00BA3E809AD564700B27E07 /* boom3.wav */; };
+		E00BA3F309AD564700B27E07 /* boom4.wav in Resources */ = {isa = PBXBuildFile; fileRef = E00BA3E909AD564700B27E07 /* boom4.wav */; };
+		E00BA3F409AD564700B27E07 /* launch1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E00BA3EA09AD564700B27E07 /* launch1.wav */; };
+		E00BA3F509AD564700B27E07 /* launch2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E00BA3EB09AD564700B27E07 /* launch2.wav */; };
+		E00BA3F609AD564700B27E07 /* nuke.wav in Resources */ = {isa = PBXBuildFile; fileRef = E00BA3EC09AD564700B27E07 /* nuke.wav */; };
+		E00BA3F709AD564700B27E07 /* poppers1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E00BA3ED09AD564700B27E07 /* poppers1.wav */; };
+		E00BA3F809AD564700B27E07 /* sucker.wav in Resources */ = {isa = PBXBuildFile; fileRef = E00BA3EE09AD564700B27E07 /* sucker.wav */; };
+		E00BA3F909AD564700B27E07 /* whistle1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E00BA3EF09AD564700B27E07 /* whistle1.wav */; };
+		E01B312809A02E4500499FE9 /* shockwave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E01B312709A02E4500499FE9 /* shockwave.cpp */; };
+		E01B312A09A02E5F00499FE9 /* world.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E01B312909A02E5F00499FE9 /* world.cpp */; };
+		E01B312D09A02E9F00499FE9 /* smoke.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E01B312C09A02E9F00499FE9 /* smoke.cpp */; };
+		E01B312F09A02EAB00499FE9 /* SoundEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = E01B312E09A02EAB00499FE9 /* SoundEngine.h */; };
+		E01B313109A02EB200499FE9 /* SoundEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E01B313009A02EB200499FE9 /* SoundEngine.cpp */; };
+		E01B313309A02EC100499FE9 /* flare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E01B313209A02EC100499FE9 /* flare.cpp */; };
+		E01B313609A02EDD00499FE9 /* particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E01B313509A02EDD00499FE9 /* particle.cpp */; };
+		E01B316509A033D600499FE9 /* rsText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E01B316409A033D600499FE9 /* rsText.cpp */; };
+		E01B316809A033EA00499FE9 /* rsText.h in Headers */ = {isa = PBXBuildFile; fileRef = E01B316609A033EA00499FE9 /* rsText.h */; };
+		E01B316909A033EA00499FE9 /* fontmap.h in Headers */ = {isa = PBXBuildFile; fileRef = E01B316709A033EA00499FE9 /* fontmap.h */; };
+		E01B31B009A0387F00499FE9 /* rsMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E01B31AF09A0387F00499FE9 /* rsMatrix.h */; };
+		E01B31B409A0389200499FE9 /* rsQuat.h in Headers */ = {isa = PBXBuildFile; fileRef = E01B31B309A0389200499FE9 /* rsQuat.h */; };
+		E01B31B609A038A800499FE9 /* rsTrigonometry.h in Headers */ = {isa = PBXBuildFile; fileRef = E01B31B509A038A800499FE9 /* rsTrigonometry.h */; };
+		E01B31BA09A038BA00499FE9 /* rsVec.h in Headers */ = {isa = PBXBuildFile; fileRef = E01B31B909A038BA00499FE9 /* rsVec.h */; };
+		E01B327609A04AE400499FE9 /* rsMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25FA17EF060688E2002931FE /* rsMatrix.cpp */; };
+		E07AA70A0CC5E71F00EB141E /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01B313B09A02F4700499FE9 /* OpenAL.framework */; };
+		E07AA7100CC5E72900EB141E /* libalut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AA70F0CC5E72900EB141E /* libalut.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		06F27B2DFFEEEFEF11CA0E56 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = /System/Library/Frameworks/ScreenSaver.framework; sourceTree = "<absolute>"; };
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		258B563E060D09EA00D90C7E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ConfigureSheet.nib; sourceTree = "<group>"; };
+		258B5642060D09FE00D90C7E /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/ConfigureSheet.nib; sourceTree = "<group>"; };
+		258B5646060D0A0D00D90C7E /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		258B564A060D0A2700D90C7E /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
+		25FA178A06068515002931FE /* cloudtex.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = cloudtex.h; sourceTree = "<group>"; };
+		25FA178E06068537002931FE /* earthtex.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = earthtex.h; sourceTree = "<group>"; };
+		25FA17920606868F002931FE /* flare.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = flare.h; sourceTree = "<group>"; };
+		25FA17960606869E002931FE /* moontex.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = moontex.h; sourceTree = "<group>"; };
+		25FA179A060686B4002931FE /* particle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = particle.h; sourceTree = "<group>"; };
+		25FA179B060686B4002931FE /* resource.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; };
+		25FA179C060686B4002931FE /* rocket.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rocket.h; sourceTree = "<group>"; };
+		25FA17A6060686E3002931FE /* shockwave.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = shockwave.h; sourceTree = "<group>"; };
+		25FA17A7060686E3002931FE /* Skyrocket.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = Skyrocket.cpp; sourceTree = "<group>"; };
+		25FA17A8060686E3002931FE /* Skyrocket.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Skyrocket.h; sourceTree = "<group>"; };
+		25FA17A9060686E3002931FE /* smoke.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = smoke.h; sourceTree = "<group>"; };
+		25FA17AA060686E3002931FE /* smoketex.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = smoketex.h; sourceTree = "<group>"; };
+		25FA17B406068704002931FE /* world.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = world.h; sourceTree = "<group>"; };
+		25FA17BA06068789002931FE /* RSSSkyrocketSaverView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RSSSkyrocketSaverView.h; sourceTree = "<group>"; };
+		25FA17BB06068789002931FE /* RSSSkyrocketSaverView.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = RSSSkyrocketSaverView.mm; sourceTree = "<group>"; };
+		25FA17E5060688C0002931FE /* rgbhsl.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = rgbhsl.cpp; sourceTree = "<group>"; };
+		25FA17E6060688C0002931FE /* rgbhsl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rgbhsl.h; sourceTree = "<group>"; };
+		25FA17ED060688E2002931FE /* rsDefines.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rsDefines.h; sourceTree = "<group>"; };
+		25FA17EE060688E2002931FE /* rsMath.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rsMath.h; sourceTree = "<group>"; };
+		25FA17EF060688E2002931FE /* rsMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = rsMatrix.cpp; sourceTree = "<group>"; };
+		25FA17F0060688E2002931FE /* rsQuat.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = rsQuat.cpp; sourceTree = "<group>"; };
+		25FA17F2060688E2002931FE /* rsVec.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = rsVec.cpp; sourceTree = "<group>"; };
+		25FB8B0B0606B1920018BAA6 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		32DBCFA80370C50100C91783 /* Skyrocket_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skyrocket_Prefix.pch; sourceTree = "<group>"; };
+		8D255AD20486D3F9007BF209 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D255AD30486D3F9007BF209 /* Skyrocket.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Skyrocket.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		E008BBC60A6379CE0097B3F3 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Japanese.lproj/ConfigureSheet.nib; sourceTree = "<group>"; };
+		E008BBC70A6379DA0097B3F3 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E008BBC80A6379E10097B3F3 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E00BA3DF09AD52EF00B27E07 /* MacHelperFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacHelperFunctions.h; sourceTree = "<group>"; };
+		E00BA3E009AD52EF00B27E07 /* MacHelperFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacHelperFunctions.m; sourceTree = "<group>"; };
+		E00BA3E609AD564700B27E07 /* boom1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom1.wav; sourceTree = "<group>"; };
+		E00BA3E709AD564700B27E07 /* boom2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom2.wav; sourceTree = "<group>"; };
+		E00BA3E809AD564700B27E07 /* boom3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom3.wav; sourceTree = "<group>"; };
+		E00BA3E909AD564700B27E07 /* boom4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom4.wav; sourceTree = "<group>"; };
+		E00BA3EA09AD564700B27E07 /* launch1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = launch1.wav; sourceTree = "<group>"; };
+		E00BA3EB09AD564700B27E07 /* launch2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = launch2.wav; sourceTree = "<group>"; };
+		E00BA3EC09AD564700B27E07 /* nuke.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nuke.wav; sourceTree = "<group>"; };
+		E00BA3ED09AD564700B27E07 /* poppers1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = poppers1.wav; sourceTree = "<group>"; };
+		E00BA3EE09AD564700B27E07 /* sucker.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sucker.wav; sourceTree = "<group>"; };
+		E00BA3EF09AD564700B27E07 /* whistle1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = whistle1.wav; sourceTree = "<group>"; };
+		E01B312709A02E4500499FE9 /* shockwave.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = shockwave.cpp; sourceTree = "<group>"; };
+		E01B312909A02E5F00499FE9 /* world.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = world.cpp; sourceTree = "<group>"; };
+		E01B312C09A02E9F00499FE9 /* smoke.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = smoke.cpp; sourceTree = "<group>"; };
+		E01B312E09A02EAB00499FE9 /* SoundEngine.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SoundEngine.h; sourceTree = "<group>"; };
+		E01B313009A02EB200499FE9 /* SoundEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = SoundEngine.cpp; sourceTree = "<group>"; };
+		E01B313209A02EC100499FE9 /* flare.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = flare.cpp; sourceTree = "<group>"; };
+		E01B313509A02EDD00499FE9 /* particle.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = particle.cpp; sourceTree = "<group>"; };
+		E01B313B09A02F4700499FE9 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = /System/Library/Frameworks/OpenAL.framework; sourceTree = "<absolute>"; };
+		E01B316409A033D600499FE9 /* rsText.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = rsText.cpp; sourceTree = "<group>"; };
+		E01B316609A033EA00499FE9 /* rsText.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rsText.h; sourceTree = "<group>"; };
+		E01B316709A033EA00499FE9 /* fontmap.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = fontmap.h; sourceTree = "<group>"; };
+		E01B31AF09A0387F00499FE9 /* rsMatrix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rsMatrix.h; sourceTree = "<group>"; };
+		E01B31B109A0388600499FE9 /* rsMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = rsMatrix.cpp; sourceTree = "<group>"; };
+		E01B31B309A0389200499FE9 /* rsQuat.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rsQuat.h; sourceTree = "<group>"; };
+		E01B31B509A038A800499FE9 /* rsTrigonometry.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = rsTrigonometry.h; sourceTree = "<group>"; };
+		E01B31B909A038BA00499FE9 /* rsVec.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rsVec.h; sourceTree = "<group>"; };
+		E07AA70F0CC5E72900EB141E /* libalut.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libalut.a; sourceTree = "<group>"; };
+		E09A9EE20A5A07E900322A8A /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D255ACD0486D3F9007BF209 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D255ACE0486D3F9007BF209 /* Cocoa.framework in Frameworks */,
+				8D255ACF0486D3F9007BF209 /* ScreenSaver.framework in Frameworks */,
+				25FB8B0C0606B1920018BAA6 /* OpenGL.framework in Frameworks */,
+				E07AA70A0CC5E71F00EB141E /* OpenAL.framework in Frameworks */,
+				E07AA7100CC5E72900EB141E /* libalut.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* RSSSkyrocket */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32DBCFA70370C4F300C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = RSSSkyrocket;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E00BA3E509AD564700B27E07 /* skyrocket_sounds */,
+				258B563D060D09EA00D90C7E /* ConfigureSheet.nib */,
+				258B5645060D0A0D00D90C7E /* Localizable.strings */,
+				8D255AD20486D3F9007BF209 /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				25FA17BA06068789002931FE /* RSSSkyrocketSaverView.h */,
+				25FA17BB06068789002931FE /* RSSSkyrocketSaverView.mm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+				06F27B2DFFEEEFEF11CA0E56 /* ScreenSaver.framework */,
+				25FB8B0B0606B1920018BAA6 /* OpenGL.framework */,
+				E01B313B09A02F4700499FE9 /* OpenAL.framework */,
+				E07AA70F0CC5E72900EB141E /* libalut.a */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D255AD30486D3F9007BF209 /* Skyrocket.saver */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32DBCFA70370C4F300C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E0CE3014099AD55D003559AF /* rsMath */,
+				E01B316009A033B300499FE9 /* rsText */,
+				E0CE3019099AD59F003559AF /* rgbhsl */,
+				E00BA3DF09AD52EF00B27E07 /* MacHelperFunctions.h */,
+				E00BA3E009AD52EF00B27E07 /* MacHelperFunctions.m */,
+				25FA17A8060686E3002931FE /* Skyrocket.h */,
+				25FA17A7060686E3002931FE /* Skyrocket.cpp */,
+				25FA17B406068704002931FE /* world.h */,
+				E01B312909A02E5F00499FE9 /* world.cpp */,
+				25FA17A6060686E3002931FE /* shockwave.h */,
+				E01B312709A02E4500499FE9 /* shockwave.cpp */,
+				25FA17A9060686E3002931FE /* smoke.h */,
+				E01B312C09A02E9F00499FE9 /* smoke.cpp */,
+				E01B312E09A02EAB00499FE9 /* SoundEngine.h */,
+				E01B313009A02EB200499FE9 /* SoundEngine.cpp */,
+				25FA17920606868F002931FE /* flare.h */,
+				E01B313209A02EC100499FE9 /* flare.cpp */,
+				25FA179A060686B4002931FE /* particle.h */,
+				E01B313509A02EDD00499FE9 /* particle.cpp */,
+				25FA17AA060686E3002931FE /* smoketex.h */,
+				25FA178A06068515002931FE /* cloudtex.h */,
+				25FA17960606869E002931FE /* moontex.h */,
+				25FA178E06068537002931FE /* earthtex.h */,
+				25FA179B060686B4002931FE /* resource.h */,
+				25FA179C060686B4002931FE /* rocket.h */,
+				32DBCFA80370C50100C91783 /* Skyrocket_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		E00BA3E509AD564700B27E07 /* skyrocket_sounds */ = {
+			isa = PBXGroup;
+			children = (
+				E00BA3E609AD564700B27E07 /* boom1.wav */,
+				E00BA3E709AD564700B27E07 /* boom2.wav */,
+				E00BA3E809AD564700B27E07 /* boom3.wav */,
+				E00BA3E909AD564700B27E07 /* boom4.wav */,
+				E00BA3EA09AD564700B27E07 /* launch1.wav */,
+				E00BA3EB09AD564700B27E07 /* launch2.wav */,
+				E00BA3EC09AD564700B27E07 /* nuke.wav */,
+				E00BA3ED09AD564700B27E07 /* poppers1.wav */,
+				E00BA3EE09AD564700B27E07 /* sucker.wav */,
+				E00BA3EF09AD564700B27E07 /* whistle1.wav */,
+			);
+			path = skyrocket_sounds;
+			sourceTree = "<group>";
+		};
+		E01B316009A033B300499FE9 /* rsText */ = {
+			isa = PBXGroup;
+			children = (
+				E01B316609A033EA00499FE9 /* rsText.h */,
+				E01B316409A033D600499FE9 /* rsText.cpp */,
+				E01B316709A033EA00499FE9 /* fontmap.h */,
+			);
+			path = rsText;
+			sourceTree = "<group>";
+		};
+		E0CE3014099AD55D003559AF /* rsMath */ = {
+			isa = PBXGroup;
+			children = (
+				25FA17ED060688E2002931FE /* rsDefines.h */,
+				25FA17EE060688E2002931FE /* rsMath.h */,
+				E01B31B109A0388600499FE9 /* rsMatrix.cpp */,
+				E01B31AF09A0387F00499FE9 /* rsMatrix.h */,
+				25FA17EF060688E2002931FE /* rsMatrix.cpp */,
+				E01B31B309A0389200499FE9 /* rsQuat.h */,
+				25FA17F0060688E2002931FE /* rsQuat.cpp */,
+				E01B31B509A038A800499FE9 /* rsTrigonometry.h */,
+				E01B31B909A038BA00499FE9 /* rsVec.h */,
+				25FA17F2060688E2002931FE /* rsVec.cpp */,
+			);
+			path = rsMath;
+			sourceTree = "<group>";
+		};
+		E0CE3019099AD59F003559AF /* rgbhsl */ = {
+			isa = PBXGroup;
+			children = (
+				25FA17E5060688C0002931FE /* rgbhsl.cpp */,
+				25FA17E6060688C0002931FE /* rgbhsl.h */,
+			);
+			path = rgbhsl;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D255AC60486D3F9007BF209 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D255AC70486D3F9007BF209 /* Skyrocket_Prefix.pch in Headers */,
+				25FA178B06068515002931FE /* cloudtex.h in Headers */,
+				25FA178F06068537002931FE /* earthtex.h in Headers */,
+				25FA17930606868F002931FE /* flare.h in Headers */,
+				25FA17970606869E002931FE /* moontex.h in Headers */,
+				25FA179D060686B4002931FE /* particle.h in Headers */,
+				25FA179E060686B4002931FE /* resource.h in Headers */,
+				25FA179F060686B4002931FE /* rocket.h in Headers */,
+				25FA17AB060686E3002931FE /* shockwave.h in Headers */,
+				25FA17AD060686E3002931FE /* Skyrocket.h in Headers */,
+				25FA17AE060686E3002931FE /* smoke.h in Headers */,
+				25FA17AF060686E3002931FE /* smoketex.h in Headers */,
+				25FA17B506068704002931FE /* world.h in Headers */,
+				25FA17F3060688E2002931FE /* rsDefines.h in Headers */,
+				25FA17F4060688E2002931FE /* rsMath.h in Headers */,
+				2526610B0607ED6400BC17F8 /* RSSSkyrocketSaverView.h in Headers */,
+				E01B312F09A02EAB00499FE9 /* SoundEngine.h in Headers */,
+				E01B316809A033EA00499FE9 /* rsText.h in Headers */,
+				E01B316909A033EA00499FE9 /* fontmap.h in Headers */,
+				E01B31B009A0387F00499FE9 /* rsMatrix.h in Headers */,
+				E01B31B409A0389200499FE9 /* rsQuat.h in Headers */,
+				E01B31B609A038A800499FE9 /* rsTrigonometry.h in Headers */,
+				E01B31BA09A038BA00499FE9 /* rsVec.h in Headers */,
+				E00BA3E109AD52EF00B27E07 /* MacHelperFunctions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D255AC50486D3F9007BF209 /* Skyrocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E067864A09998D3400A2DC93 /* Build configuration list for PBXNativeTarget "Skyrocket" */;
+			buildPhases = (
+				8D255AC60486D3F9007BF209 /* Headers */,
+				8D255AC90486D3F9007BF209 /* Resources */,
+				8D255ACB0486D3F9007BF209 /* Sources */,
+				8D255ACD0486D3F9007BF209 /* Frameworks */,
+				8D255AD00486D3F9007BF209 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Skyrocket;
+			productInstallPath = "$(HOME)/Library/Screen Savers";
+			productName = RSSSkyrocket;
+			productReference = 8D255AD30486D3F9007BF209 /* Skyrocket.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = E067864E09998D3400A2DC93 /* Build configuration list for PBXProject "Skyrocket" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				"Skyrocket Japanese",
+				fr_CA,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* RSSSkyrocket */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D255AC50486D3F9007BF209 /* Skyrocket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D255AC90486D3F9007BF209 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D255ACA0486D3F9007BF209 /* InfoPlist.strings in Resources */,
+				258B563F060D09EA00D90C7E /* ConfigureSheet.nib in Resources */,
+				258B5647060D0A0D00D90C7E /* Localizable.strings in Resources */,
+				E00BA3F009AD564700B27E07 /* boom1.wav in Resources */,
+				E00BA3F109AD564700B27E07 /* boom2.wav in Resources */,
+				E00BA3F209AD564700B27E07 /* boom3.wav in Resources */,
+				E00BA3F309AD564700B27E07 /* boom4.wav in Resources */,
+				E00BA3F409AD564700B27E07 /* launch1.wav in Resources */,
+				E00BA3F509AD564700B27E07 /* launch2.wav in Resources */,
+				E00BA3F609AD564700B27E07 /* nuke.wav in Resources */,
+				E00BA3F709AD564700B27E07 /* poppers1.wav in Resources */,
+				E00BA3F809AD564700B27E07 /* sucker.wav in Resources */,
+				E00BA3F909AD564700B27E07 /* whistle1.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		8D255AD00486D3F9007BF209 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D255ACB0486D3F9007BF209 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25FA17AC060686E3002931FE /* Skyrocket.cpp in Sources */,
+				25FB8BFC0606B88C0018BAA6 /* rsVec.cpp in Sources */,
+				25FB8BFD0606B8A20018BAA6 /* rsQuat.cpp in Sources */,
+				2526610C0607ED6A00BC17F8 /* RSSSkyrocketSaverView.mm in Sources */,
+				E01B312809A02E4500499FE9 /* shockwave.cpp in Sources */,
+				E01B312A09A02E5F00499FE9 /* world.cpp in Sources */,
+				E01B312D09A02E9F00499FE9 /* smoke.cpp in Sources */,
+				E01B313109A02EB200499FE9 /* SoundEngine.cpp in Sources */,
+				E01B313309A02EC100499FE9 /* flare.cpp in Sources */,
+				E01B313609A02EDD00499FE9 /* particle.cpp in Sources */,
+				E01B316509A033D600499FE9 /* rsText.cpp in Sources */,
+				E01B327609A04AE400499FE9 /* rsMatrix.cpp in Sources */,
+				E00BA3E209AD52EF00B27E07 /* MacHelperFunctions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+				E09A9EE20A5A07E900322A8A /* French */,
+				E008BBC70A6379DA0097B3F3 /* Japanese */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		258B563D060D09EA00D90C7E /* ConfigureSheet.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				258B563E060D09EA00D90C7E /* English */,
+				258B5642060D09FE00D90C7E /* French */,
+				E008BBC60A6379CE0097B3F3 /* Japanese */,
+			);
+			name = ConfigureSheet.nib;
+			sourceTree = "<group>";
+		};
+		258B5645060D0A0D00D90C7E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				258B5646060D0A0D00D90C7E /* English */,
+				258B564A060D0A2700D90C7E /* French */,
+				E008BBC80A6379E10097B3F3 /* Japanese */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E067864B09998D3400A2DC93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Skyrocket_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LIBRARY_SEARCH_PATHS = (
+					"$(LIBRARY_SEARCH_PATHS)",
+					"$(SRCROOT)",
+				);
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = Skyrocket;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"-Wno-missing-braces",
+				);
+				WRAPPER_EXTENSION = saver;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		E067864C09998D3400A2DC93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Skyrocket_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LIBRARY_SEARCH_PATHS = (
+					"$(LIBRARY_SEARCH_PATHS)",
+					"$(SRCROOT)",
+				);
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = Skyrocket;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"-Wno-missing-braces",
+				);
+				WRAPPER_EXTENSION = saver;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		E067864F09998D3400A2DC93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		E067865009998D3400A2DC93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E067864A09998D3400A2DC93 /* Build configuration list for PBXNativeTarget "Skyrocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E067864B09998D3400A2DC93 /* Debug */,
+				E067864C09998D3400A2DC93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E067864E09998D3400A2DC93 /* Build configuration list for PBXProject "Skyrocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E067864F09998D3400A2DC93 /* Debug */,
+				E067865009998D3400A2DC93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

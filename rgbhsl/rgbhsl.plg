@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rgbhsl - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1.000\LOCALS~1\Temp\RSP167.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/rgbhsl.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\Microsoft Visual Studio\MyProjects\ReallySlickSourceCode\rgbhsl\rgbhsl.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1.000\LOCALS~1\Temp\RSP167.tmp" 
+Creating command line "link.exe -lib /nologo /out:"Release\rgbhsl.lib"  ".\Release\rgbhsl.obj" "
+<h3>Output Window</h3>
+Compiling...
+rgbhsl.cpp
+Creating library...
+
+
+
+<h3>Results</h3>
+rgbhsl.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
