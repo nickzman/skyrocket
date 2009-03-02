@@ -21,7 +21,7 @@
 #ifndef SHOCKWAVE_H
 #define SHOCKWAVE_H
 
-#include "Skyrocket.h"
+struct SkyrocketSaverSettings;
 
 void initShockwave();
 

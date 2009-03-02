@@ -7,6 +7,9 @@
 #include "smoke.h"
 #include "SoundEngine.h"
 #include <OpenGL/gl.h>
+#ifndef PARTICLE_H
+#include "particle.h"
+#endif
 
 #define PI 3.14159265359f
 #define PIx2 6.28318530718f
@@ -16,7 +19,7 @@
 #define MINDEPTH -1000000.0f  // particle depth for inactive particles
 
 class World;
-class particle;
+//class particle;
 
 typedef struct SkyrocketSaverSettings
 {

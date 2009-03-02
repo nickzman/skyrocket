@@ -645,7 +645,7 @@ __private_extern__ void draw(SkyrocketSaverSettings * inSettings){
 	// because particles can spawn other particles.  resizing the vector, and, thus, 
 	// moving all particle addresses, doesn't work if you are in the middle of
 	// updating a particle.
-	const unsigned int size(inSettings->particles.size());
+	//const unsigned int size(inSettings->particles.size());
 	if(inSettings->particles.size() - int(inSettings->last_particle) < 1000)
 		inSettings->particles.resize(inSettings->particles.size() + 1000, inSettings);
 

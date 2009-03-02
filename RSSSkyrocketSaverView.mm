@@ -31,7 +31,7 @@
         mainScreen_= (frameRect.origin.x==0 && frameRect.origin.y==0) ? YES : NO;
     }
     
-    mainScreenOnly_=[defaults integerForKey:@"MainScreen Only"];
+    mainScreenOnly_=int([defaults integerForKey:@"MainScreen Only"]);
     
     if (self)
     {
@@ -172,12 +172,12 @@
             NSSize tSize;
             struct timeval tTime;
             int i;
-			long interval = 1;
+			GLint interval = 1;
             
             [self lockFocus];
             [[_view openGLContext] makeCurrentContext];
             
-            glClearColor(0.0, 0.0, 0.0, 0.0);
+            glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
             glClear(GL_COLOR_BUFFER_BIT);
             glFlush();
             CGLSetParameter(CGLGetCurrentContext(), kCGLCPSwapInterval, &interval);	// don't allow screen tearing
@@ -191,7 +191,7 @@
 
             for(i=0;i<10;i++)
             {
-                times[i]=0.03;
+                times[i]=0.03f;
             }
 
             timeindex = 0;
@@ -236,35 +236,35 @@
     //      consistent throughout file.  I think this is the key for the prefs 
     //      file, so... make it user readable
 
-    settings_.dMaxrockets=[inDefaults integerForKey:@"MaxRockets"];
+    settings_.dMaxrockets=int([inDefaults integerForKey:@"MaxRockets"]);
     
-    settings_.dSmoke=[inDefaults integerForKey:@"SmokeLifespan"];
+    settings_.dSmoke=int([inDefaults integerForKey:@"SmokeLifespan"]);
     
-    settings_.dExplosionsmoke=[inDefaults integerForKey:@"SmokePerExplosion"];
+    settings_.dExplosionsmoke=int([inDefaults integerForKey:@"SmokePerExplosion"]);
     
-    settings_.dWind=[inDefaults integerForKey:@"WindSpeed"];
+    settings_.dWind=int([inDefaults integerForKey:@"WindSpeed"]);
     
-    settings_.dAmbient=[inDefaults integerForKey:@"AmbientLight"];
+    settings_.dAmbient=int([inDefaults integerForKey:@"AmbientLight"]);
     
-    settings_.dStardensity=[inDefaults integerForKey:@"StarDensity"];
+    settings_.dStardensity=int([inDefaults integerForKey:@"StarDensity"]);
     
-    settings_.dFlare=[inDefaults integerForKey:@"LensFlareBrightness"];
+    settings_.dFlare=int([inDefaults integerForKey:@"LensFlareBrightness"]);
     
-    settings_.dMoonglow=[inDefaults integerForKey:@"MoonGlowBrightness"];
+    settings_.dMoonglow=int([inDefaults integerForKey:@"MoonGlowBrightness"]);
 	if (soundDisabled_ == NO)
-		settings_.dSound = [inDefaults integerForKey:@"SoundVolume"];
-    settings_.kCamera=[inDefaults integerForKey:@"CameraMovement"];
+		settings_.dSound = int([inDefaults integerForKey:@"SoundVolume"]);
+    settings_.kCamera=int([inDefaults integerForKey:@"CameraMovement"]);
 	settings_.kSlowMotion = [inDefaults boolForKey:@"SlowMotion"];
     
-    settings_.dMoon=[inDefaults integerForKey:@"DrawMoon"];
+    settings_.dMoon=int([inDefaults integerForKey:@"DrawMoon"]);
     
-    settings_.dEarth=[inDefaults integerForKey:@"DrawEarth"];
+    settings_.dEarth=int([inDefaults integerForKey:@"DrawEarth"]);
     
-    settings_.dClouds=[inDefaults integerForKey:@"DrawClouds"];
+    settings_.dClouds=int([inDefaults integerForKey:@"DrawClouds"]);
     
-    settings_.dIllumination=[inDefaults integerForKey:@"Illumination"];
+    settings_.dIllumination=int([inDefaults integerForKey:@"Illumination"]);
 
-    mainScreenOnly_=[inDefaults integerForKey:@"MainScreen Only"];
+    mainScreenOnly_=int([inDefaults integerForKey:@"MainScreen Only"]);
 }
 
 - (void) writeDefaults
@@ -272,13 +272,13 @@
     NSString *identifier = [[NSBundle bundleForClass:[self class]] bundleIdentifier];
     ScreenSaverDefaults *inDefaults = [ScreenSaverDefaults defaultsForModuleWithName:identifier];
     
-    mainScreenOnly_=[IBmainScreen_ state];
+    mainScreenOnly_=int([IBmainScreen_ state]);
     
-    settings_.dClouds=[IBclouds_ state];
-    settings_.dEarth=[IBearth_ state];
-    settings_.dMoon=[IBmoon_ state];
-    settings_.dIllumination=[IBillumination_ state];
-    settings_.kCamera=[IBcamera_ state];
+    settings_.dClouds=int([IBclouds_ state]);
+    settings_.dEarth=int([IBearth_ state]);
+    settings_.dMoon=int([IBmoon_ state]);
+    settings_.dIllumination=int([IBillumination_ state]);
+    settings_.kCamera=int([IBcamera_ state]);
 	settings_.kSlowMotion = ([IBslowMotion_ state] == NSOnState ? true : false);
     
     [inDefaults setInteger:settings_.dMaxrockets forKey:@"MaxRockets"];
@@ -477,7 +477,7 @@
 	WORD locationx = WORD(location.x);
 	WORD locationy = WORD([self frame].size.height-location.y);
 	
-	if (ScreenSaverProc(WM_LBUTTONDOWN, NSEventMaskFromType([anEvent type]), MAKELONG(locationx, locationy), &settings_) != 0)
+	if (ScreenSaverProc(WM_LBUTTONDOWN, unsigned(NSEventMaskFromType([anEvent type])), MAKELONG(locationx, locationy), &settings_) != 0)
 		[super mouseDown:anEvent];
 }
 
@@ -499,7 +499,7 @@
 	WORD locationx = WORD(location.x);
 	WORD locationy = WORD([self frame].size.height-location.y);
 	
-	if (ScreenSaverProc(WM_MOUSEMOVE, NSEventMaskFromType([anEvent type]), MAKELONG(locationx, locationy), &settings_) != 0)
+	if (ScreenSaverProc(WM_MOUSEMOVE, unsigned(NSEventMaskFromType([anEvent type])), MAKELONG(locationx, locationy), &settings_) != 0)
 		[super mouseMoved:anEvent];
 }
 
@@ -510,7 +510,7 @@
 	WORD locationx = WORD(location.x);
 	WORD locationy = WORD([self frame].size.height-location.y);
 	
-	if (ScreenSaverProc(WM_LBUTTONUP, NSEventMaskFromType([anEvent type]), MAKELONG(locationx, locationy), &settings_) != 0)
+	if (ScreenSaverProc(WM_LBUTTONUP, unsigned(NSEventMaskFromType([anEvent type])), MAKELONG(locationx, locationy), &settings_) != 0)
 		[super mouseUp:anEvent];
 }
 
@@ -521,7 +521,7 @@
 	WORD locationx = WORD(location.x);
 	WORD locationy = WORD([self frame].size.height-location.y);
 	
-	if (ScreenSaverProc(WM_RBUTTONDOWN, NSEventMaskFromType([anEvent type]), MAKELONG(locationx, locationy), &settings_) != 0)
+	if (ScreenSaverProc(WM_RBUTTONDOWN, unsigned(NSEventMaskFromType([anEvent type])), MAKELONG(locationx, locationy), &settings_) != 0)
 		[super rightMouseDown:anEvent];
 }
 
@@ -543,7 +543,7 @@
 	WORD locationx = WORD(location.x);
 	WORD locationy = WORD([self frame].size.height-location.y);
 	
-	if (ScreenSaverProc(WM_RBUTTONUP, NSEventMaskFromType([anEvent type]), MAKELONG(locationx, locationy), &settings_) != 0)
+	if (ScreenSaverProc(WM_RBUTTONUP, unsigned(NSEventMaskFromType([anEvent type])), MAKELONG(locationx, locationy), &settings_) != 0)
 		[super rightMouseUp:anEvent];
 }
 

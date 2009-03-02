@@ -35,7 +35,8 @@
 #include "smoke.h"
 #include "shockwave.h"
 #include "SoundEngine.h"
-#include "Skyrocket.h"
+
+struct SkyrocketSaverSettings;
 
 
 #define PI 3.14159265359f
