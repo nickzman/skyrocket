@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-const char *PathForResourceOfType(char *resourceName, char *type);
+const char *PathForResourceOfType(const char *resourceName, const char *type);
 
 #ifdef __cplusplus
 }

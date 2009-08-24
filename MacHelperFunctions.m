@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "MacHelperFunctions.h"
 
-const char *PathForResourceOfType(char *resourceName, char *type)
+const char *PathForResourceOfType(const char *resourceName, const char *type)
 {
 	NSString *resourceNameString = [[NSFileManager defaultManager] stringWithFileSystemRepresentation:resourceName length:strlen(resourceName)];
 	NSString *typeString = [[NSFileManager defaultManager] stringWithFileSystemRepresentation:type length:strlen(type)];
