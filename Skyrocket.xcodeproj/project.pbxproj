@@ -60,7 +60,7 @@
 		E01B31B609A038A800499FE9 /* rsTrigonometry.h in Headers */ = {isa = PBXBuildFile; fileRef = E01B31B509A038A800499FE9 /* rsTrigonometry.h */; };
 		E01B31BA09A038BA00499FE9 /* rsVec.h in Headers */ = {isa = PBXBuildFile; fileRef = E01B31B909A038BA00499FE9 /* rsVec.h */; };
 		E01B327609A04AE400499FE9 /* rsMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25FA17EF060688E2002931FE /* rsMatrix.cpp */; };
-		E07AA70A0CC5E71F00EB141E /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01B313B09A02F4700499FE9 /* OpenAL.framework */; };
+		E07AA70A0CC5E71F00EB141E /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01B313B09A02F4700499FE9 /* OpenAL.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E07AA7100CC5E72900EB141E /* libalut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AA70F0CC5E72900EB141E /* libalut.a */; };
 /* End PBXBuildFile section */
 
