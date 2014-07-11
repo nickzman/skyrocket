@@ -370,8 +370,11 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = E067864E09998D3400A2DC93 /* Build configuration list for PBXProject "Skyrocket" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -555,22 +558,13 @@
 		E067864F09998D3400A2DC93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-					x86_64,
-				);
-				"GCC_ENABLE_OBJC_GC[arch=x86_64]" = supported;
-				"GCC_VERSION[sdk=macosx10.4][arch=*]" = 4.0;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
 				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
 				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx10.4;
-				"SDKROOT[arch=i386]" = macosx10.4;
-				"SDKROOT[arch=ppc]" = macosx10.4;
-				"SDKROOT[arch=x86_64]" = macosx10.6;
+				SDKROOT = macosx10.7;
 				WARNING_CFLAGS = "-Wmost";
 			};
 			name = Debug;
@@ -578,20 +572,12 @@
 		E067865009998D3400A2DC93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-					x86_64,
-				);
-				"GCC_ENABLE_OBJC_GC[arch=x86_64]" = supported;
-				"GCC_VERSION[sdk=macosx10.4][arch=*]" = 4.0;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
 				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
 				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.6;
-				"SDKROOT[arch=i386]" = macosx10.4;
-				"SDKROOT[arch=ppc]" = macosx10.4;
-				"SDKROOT[arch=x86_64]" = macosx10.6;
+				SDKROOT = macosx10.7;
 				WARNING_CFLAGS = "-Wmost";
 			};
 			name = Release;

@@ -7,6 +7,7 @@
 #include "resource.h"
 #include <sys/time.h>
 #import <OpenGL/OpenGL.h>
+#define DT  0.016
 
 @implementation RSSSkyrocketSaverView
 
@@ -69,7 +70,7 @@
                     [self readDefaults:defaults];
                 }
                 
-                [self setAnimationTimeInterval:0.03];
+                [self setAnimationTimeInterval: DT];
             }
         }
     }
@@ -191,7 +192,7 @@
 
             for(i=0;i<10;i++)
             {
-                times[i]=0.03f;
+                times[i] = DT;
             }
 
             timeindex = 0;
