@@ -3,20 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2526610B0607ED6400BC17F8 /* RSSSkyrocketSaverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17BA06068789002931FE /* RSSSkyrocketSaverView.h */; };
 		2526610C0607ED6A00BC17F8 /* RSSSkyrocketSaverView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 25FA17BB06068789002931FE /* RSSSkyrocketSaverView.mm */; };
-		258B563F060D09EA00D90C7E /* ConfigureSheet.nib in Resources */ = {isa = PBXBuildFile; fileRef = 258B563D060D09EA00D90C7E /* ConfigureSheet.nib */; };
 		258B5647060D0A0D00D90C7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 258B5645060D0A0D00D90C7E /* Localizable.strings */; };
 		25FA178B06068515002931FE /* cloudtex.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA178A06068515002931FE /* cloudtex.h */; };
 		25FA178F06068537002931FE /* earthtex.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA178E06068537002931FE /* earthtex.h */; };
 		25FA17930606868F002931FE /* flare.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17920606868F002931FE /* flare.h */; };
 		25FA17970606869E002931FE /* moontex.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17960606869E002931FE /* moontex.h */; };
 		25FA179D060686B4002931FE /* particle.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA179A060686B4002931FE /* particle.h */; };
-		25FA179E060686B4002931FE /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA179B060686B4002931FE /* resource.h */; };
 		25FA179F060686B4002931FE /* rocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA179C060686B4002931FE /* rocket.h */; };
 		25FA17AB060686E3002931FE /* shockwave.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17A6060686E3002931FE /* shockwave.h */; };
 		25FA17AC060686E3002931FE /* Skyrocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25FA17A7060686E3002931FE /* Skyrocket.cpp */; };
@@ -24,7 +22,6 @@
 		25FA17AE060686E3002931FE /* smoke.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17A9060686E3002931FE /* smoke.h */; };
 		25FA17AF060686E3002931FE /* smoketex.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17AA060686E3002931FE /* smoketex.h */; };
 		25FA17B506068704002931FE /* world.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17B406068704002931FE /* world.h */; };
-		25FA17F3060688E2002931FE /* rsDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17ED060688E2002931FE /* rsDefines.h */; };
 		25FA17F4060688E2002931FE /* rsMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FA17EE060688E2002931FE /* rsMath.h */; };
 		25FB8B0C0606B1920018BAA6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FB8B0B0606B1920018BAA6 /* OpenGL.framework */; };
 		25FB8BFC0606B88C0018BAA6 /* rsVec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25FA17F2060688E2002931FE /* rsVec.cpp */; };
@@ -60,26 +57,24 @@
 		E01B31B609A038A800499FE9 /* rsTrigonometry.h in Headers */ = {isa = PBXBuildFile; fileRef = E01B31B509A038A800499FE9 /* rsTrigonometry.h */; };
 		E01B31BA09A038BA00499FE9 /* rsVec.h in Headers */ = {isa = PBXBuildFile; fileRef = E01B31B909A038BA00499FE9 /* rsVec.h */; };
 		E01B327609A04AE400499FE9 /* rsMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25FA17EF060688E2002931FE /* rsMatrix.cpp */; };
+		E023FF12247391D300C99884 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = E023FF11247391D300C99884 /* thumbnail.png */; };
+		E02D511C247B7AF3008561D1 /* rsVec4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E02D511A247B7AF3008561D1 /* rsVec4.cpp */; };
+		E02D511D247B7AF3008561D1 /* rsVec4.h in Headers */ = {isa = PBXBuildFile; fileRef = E02D511B247B7AF3008561D1 /* rsVec4.h */; };
 		E07AA70A0CC5E71F00EB141E /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01B313B09A02F4700499FE9 /* OpenAL.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E07AA7100CC5E72900EB141E /* libalut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07AA70F0CC5E72900EB141E /* libalut.a */; };
+		E0957E9E24733A93007A7B6C /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0957E9C24733A93007A7B6C /* ConfigureSheet.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		06F27B2DFFEEEFEF11CA0E56 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = /System/Library/Frameworks/ScreenSaver.framework; sourceTree = "<absolute>"; };
 		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		258B563E060D09EA00D90C7E /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ConfigureSheet.nib; sourceTree = "<group>"; };
-		258B5642060D09FE00D90C7E /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/ConfigureSheet.nib; sourceTree = "<group>"; };
-		258B5646060D0A0D00D90C7E /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
-		258B564A060D0A2700D90C7E /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
 		25FA178A06068515002931FE /* cloudtex.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = cloudtex.h; sourceTree = "<group>"; };
 		25FA178E06068537002931FE /* earthtex.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = earthtex.h; sourceTree = "<group>"; };
 		25FA17920606868F002931FE /* flare.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = flare.h; sourceTree = "<group>"; };
 		25FA17960606869E002931FE /* moontex.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = moontex.h; sourceTree = "<group>"; };
 		25FA179A060686B4002931FE /* particle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = particle.h; sourceTree = "<group>"; };
-		25FA179B060686B4002931FE /* resource.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; };
 		25FA179C060686B4002931FE /* rocket.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rocket.h; sourceTree = "<group>"; };
 		25FA17A6060686E3002931FE /* shockwave.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = shockwave.h; sourceTree = "<group>"; };
 		25FA17A7060686E3002931FE /* Skyrocket.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = Skyrocket.cpp; sourceTree = "<group>"; };
@@ -89,9 +84,6 @@
 		25FA17B406068704002931FE /* world.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = world.h; sourceTree = "<group>"; };
 		25FA17BA06068789002931FE /* RSSSkyrocketSaverView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RSSSkyrocketSaverView.h; sourceTree = "<group>"; };
 		25FA17BB06068789002931FE /* RSSSkyrocketSaverView.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = RSSSkyrocketSaverView.mm; sourceTree = "<group>"; };
-		25FA17E5060688C0002931FE /* rgbhsl.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = rgbhsl.cpp; sourceTree = "<group>"; };
-		25FA17E6060688C0002931FE /* rgbhsl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rgbhsl.h; sourceTree = "<group>"; };
-		25FA17ED060688E2002931FE /* rsDefines.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rsDefines.h; sourceTree = "<group>"; };
 		25FA17EE060688E2002931FE /* rsMath.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rsMath.h; sourceTree = "<group>"; };
 		25FA17EF060688E2002931FE /* rsMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = rsMatrix.cpp; sourceTree = "<group>"; };
 		25FA17F0060688E2002931FE /* rsQuat.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = rsQuat.cpp; sourceTree = "<group>"; };
@@ -100,9 +92,6 @@
 		32DBCFA80370C50100C91783 /* Skyrocket_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skyrocket_Prefix.pch; sourceTree = "<group>"; };
 		8D255AD20486D3F9007BF209 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D255AD30486D3F9007BF209 /* Skyrocket.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Skyrocket.saver; sourceTree = BUILT_PRODUCTS_DIR; };
-		E008BBC60A6379CE0097B3F3 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Japanese.lproj/ConfigureSheet.nib; sourceTree = "<group>"; };
-		E008BBC70A6379DA0097B3F3 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E008BBC80A6379E10097B3F3 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E00BA3DF09AD52EF00B27E07 /* MacHelperFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacHelperFunctions.h; sourceTree = "<group>"; };
 		E00BA3E009AD52EF00B27E07 /* MacHelperFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacHelperFunctions.m; sourceTree = "<group>"; };
 		E00BA3E609AD564700B27E07 /* boom1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom1.wav; sourceTree = "<group>"; };
@@ -131,8 +120,19 @@
 		E01B31B309A0389200499FE9 /* rsQuat.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rsQuat.h; sourceTree = "<group>"; };
 		E01B31B509A038A800499FE9 /* rsTrigonometry.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = rsTrigonometry.h; sourceTree = "<group>"; };
 		E01B31B909A038BA00499FE9 /* rsVec.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rsVec.h; sourceTree = "<group>"; };
+		E023FF11247391D300C99884 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		E02D5115247B7337008561D1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ConfigureSheet.strings; sourceTree = "<group>"; };
+		E02D5119247B7348008561D1 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ConfigureSheet.strings; sourceTree = "<group>"; };
+		E02D511A247B7AF3008561D1 /* rsVec4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rsVec4.cpp; sourceTree = "<group>"; };
+		E02D511B247B7AF3008561D1 /* rsVec4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rsVec4.h; sourceTree = "<group>"; };
 		E07AA70F0CC5E72900EB141E /* libalut.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libalut.a; sourceTree = "<group>"; };
-		E09A9EE20A5A07E900322A8A /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E0957E9524733470007A7B6C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E0957E9624733470007A7B6C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E0957E9824733474007A7B6C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E0957E9924733474007A7B6C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E0957E9A24733478007A7B6C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E0957E9B24733478007A7B6C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E0957E9D24733A93007A7B6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfigureSheet.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,10 +176,11 @@
 			isa = PBXGroup;
 			children = (
 				E00BA3E509AD564700B27E07 /* skyrocket_sounds */,
-				258B563D060D09EA00D90C7E /* ConfigureSheet.nib */,
+				E0957E9C24733A93007A7B6C /* ConfigureSheet.xib */,
 				258B5645060D0A0D00D90C7E /* Localizable.strings */,
 				8D255AD20486D3F9007BF209 /* Info.plist */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+				E023FF11247391D300C99884 /* thumbnail.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -227,7 +228,6 @@
 			children = (
 				E0CE3014099AD55D003559AF /* rsMath */,
 				E01B316009A033B300499FE9 /* rsText */,
-				E0CE3019099AD59F003559AF /* rgbhsl */,
 				E00BA3DF09AD52EF00B27E07 /* MacHelperFunctions.h */,
 				E00BA3E009AD52EF00B27E07 /* MacHelperFunctions.m */,
 				25FA17A8060686E3002931FE /* Skyrocket.h */,
@@ -248,7 +248,6 @@
 				25FA178A06068515002931FE /* cloudtex.h */,
 				25FA17960606869E002931FE /* moontex.h */,
 				25FA178E06068537002931FE /* earthtex.h */,
-				25FA179B060686B4002931FE /* resource.h */,
 				25FA179C060686B4002931FE /* rocket.h */,
 				32DBCFA80370C50100C91783 /* Skyrocket_Prefix.pch */,
 			);
@@ -285,7 +284,6 @@
 		E0CE3014099AD55D003559AF /* rsMath */ = {
 			isa = PBXGroup;
 			children = (
-				25FA17ED060688E2002931FE /* rsDefines.h */,
 				25FA17EE060688E2002931FE /* rsMath.h */,
 				E01B31B109A0388600499FE9 /* rsMatrix.cpp */,
 				E01B31AF09A0387F00499FE9 /* rsMatrix.h */,
@@ -295,17 +293,10 @@
 				E01B31B509A038A800499FE9 /* rsTrigonometry.h */,
 				E01B31B909A038BA00499FE9 /* rsVec.h */,
 				25FA17F2060688E2002931FE /* rsVec.cpp */,
+				E02D511B247B7AF3008561D1 /* rsVec4.h */,
+				E02D511A247B7AF3008561D1 /* rsVec4.cpp */,
 			);
 			path = rsMath;
-			sourceTree = "<group>";
-		};
-		E0CE3019099AD59F003559AF /* rgbhsl */ = {
-			isa = PBXGroup;
-			children = (
-				25FA17E5060688C0002931FE /* rgbhsl.cpp */,
-				25FA17E6060688C0002931FE /* rgbhsl.h */,
-			);
-			path = rgbhsl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,14 +312,13 @@
 				25FA17930606868F002931FE /* flare.h in Headers */,
 				25FA17970606869E002931FE /* moontex.h in Headers */,
 				25FA179D060686B4002931FE /* particle.h in Headers */,
-				25FA179E060686B4002931FE /* resource.h in Headers */,
 				25FA179F060686B4002931FE /* rocket.h in Headers */,
 				25FA17AB060686E3002931FE /* shockwave.h in Headers */,
 				25FA17AD060686E3002931FE /* Skyrocket.h in Headers */,
 				25FA17AE060686E3002931FE /* smoke.h in Headers */,
 				25FA17AF060686E3002931FE /* smoketex.h in Headers */,
 				25FA17B506068704002931FE /* world.h in Headers */,
-				25FA17F3060688E2002931FE /* rsDefines.h in Headers */,
+				E02D511D247B7AF3008561D1 /* rsVec4.h in Headers */,
 				25FA17F4060688E2002931FE /* rsMath.h in Headers */,
 				2526610B0607ED6400BC17F8 /* RSSSkyrocketSaverView.h in Headers */,
 				E01B312F09A02EAB00499FE9 /* SoundEngine.h in Headers */,
@@ -370,16 +360,18 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+			};
 			buildConfigurationList = E067864E09998D3400A2DC93 /* Build configuration list for PBXProject "Skyrocket" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
-				"Skyrocket Japanese",
-				fr_CA,
+				Base,
+				ja,
+				fr,
+				en,
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* RSSSkyrocket */;
 			projectDirPath = "";
@@ -396,11 +388,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D255ACA0486D3F9007BF209 /* InfoPlist.strings in Resources */,
-				258B563F060D09EA00D90C7E /* ConfigureSheet.nib in Resources */,
 				258B5647060D0A0D00D90C7E /* Localizable.strings in Resources */,
 				E00BA3F009AD564700B27E07 /* boom1.wav in Resources */,
 				E00BA3F109AD564700B27E07 /* boom2.wav in Resources */,
 				E00BA3F209AD564700B27E07 /* boom3.wav in Resources */,
+				E0957E9E24733A93007A7B6C /* ConfigureSheet.xib in Resources */,
+				E023FF12247391D300C99884 /* thumbnail.png in Resources */,
 				E00BA3F309AD564700B27E07 /* boom4.wav in Resources */,
 				E00BA3F409AD564700B27E07 /* launch1.wav in Resources */,
 				E00BA3F509AD564700B27E07 /* launch2.wav in Resources */,
@@ -438,6 +431,7 @@
 				E01B313109A02EB200499FE9 /* SoundEngine.cpp in Sources */,
 				E01B313309A02EC100499FE9 /* flare.cpp in Sources */,
 				E01B313609A02EDD00499FE9 /* particle.cpp in Sources */,
+				E02D511C247B7AF3008561D1 /* rsVec4.cpp in Sources */,
 				E01B316509A033D600499FE9 /* rsText.cpp in Sources */,
 				E01B327609A04AE400499FE9 /* rsMatrix.cpp in Sources */,
 				E00BA3E209AD52EF00B27E07 /* MacHelperFunctions.m in Sources */,
@@ -450,31 +444,31 @@
 		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				089C167EFE841241C02AAC07 /* English */,
-				E09A9EE20A5A07E900322A8A /* French */,
-				E008BBC70A6379DA0097B3F3 /* Japanese */,
+				E0957E9524733470007A7B6C /* ja */,
+				E0957E9824733474007A7B6C /* fr */,
+				E0957E9A24733478007A7B6C /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		258B563D060D09EA00D90C7E /* ConfigureSheet.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				258B563E060D09EA00D90C7E /* English */,
-				258B5642060D09FE00D90C7E /* French */,
-				E008BBC60A6379CE0097B3F3 /* Japanese */,
-			);
-			name = ConfigureSheet.nib;
 			sourceTree = "<group>";
 		};
 		258B5645060D0A0D00D90C7E /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				258B5646060D0A0D00D90C7E /* English */,
-				258B564A060D0A2700D90C7E /* French */,
-				E008BBC80A6379E10097B3F3 /* Japanese */,
+				E0957E9624733470007A7B6C /* ja */,
+				E0957E9924733474007A7B6C /* fr */,
+				E0957E9B24733478007A7B6C /* en */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		E0957E9C24733A93007A7B6C /* ConfigureSheet.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0957E9D24733A93007A7B6C /* Base */,
+				E02D5115247B7337008561D1 /* fr */,
+				E02D5119247B7348008561D1 /* ja */,
+			);
+			name = ConfigureSheet.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -483,12 +477,13 @@
 		E067864B09998D3400A2DC93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_TRIGRAPHS = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Skyrocket_Prefix.pch;
@@ -502,8 +497,8 @@
 					"$(LIBRARY_SEARCH_PATHS)",
 					"\"$(SRCROOT)\"",
 				);
-				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reallyslick.Skyrocket;
 				PRODUCT_NAME = Skyrocket;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
@@ -513,18 +508,20 @@
 					"-Wno-missing-braces",
 				);
 				WRAPPER_EXTENSION = saver;
-				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
 		E067864C09998D3400A2DC93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_FAST_MATH = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Skyrocket_Prefix.pch;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
@@ -537,8 +534,8 @@
 					"$(LIBRARY_SEARCH_PATHS)",
 					"\"$(SRCROOT)\"",
 				);
-				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reallyslick.Skyrocket;
 				PRODUCT_NAME = Skyrocket;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
@@ -548,29 +545,43 @@
 					"-Wno-missing-braces",
 				);
 				WRAPPER_EXTENSION = saver;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
 		E067864F09998D3400A2DC93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-					x86_64,
-				);
-				"GCC_ENABLE_OBJC_GC[arch=x86_64]" = supported;
-				"GCC_VERSION[sdk=macosx10.4][arch=*]" = 4.0;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.6;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx10.4;
-				"SDKROOT[arch=i386]" = macosx10.4;
-				"SDKROOT[arch=ppc]" = macosx10.4;
-				"SDKROOT[arch=x86_64]" = macosx10.6;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wmost";
 			};
 			name = Debug;
@@ -578,20 +589,35 @@
 		E067865009998D3400A2DC93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-					x86_64,
-				);
-				"GCC_ENABLE_OBJC_GC[arch=x86_64]" = supported;
-				"GCC_VERSION[sdk=macosx10.4][arch=*]" = 4.0;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.6;
-				"SDKROOT[arch=i386]" = macosx10.4;
-				"SDKROOT[arch=ppc]" = macosx10.4;
-				"SDKROOT[arch=x86_64]" = macosx10.6;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wmost";
 			};
 			name = Release;

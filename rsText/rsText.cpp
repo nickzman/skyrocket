@@ -1,11 +1,12 @@
 /*
- * Copyright (C) 2005  Terence M. Welsh
+ * Copyright (C) 2005-2010  Terence M. Welsh
  *
  * This file is part of rsText.
  *
  * rsText is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
- * License version 2.1 as published by the Free Software Foundation.
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
  *
  * rsText is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -84,8 +85,6 @@ void rsText::draw(std::string &str){
 void rsText::draw(std::vector<std::string> &strvec){
 	int character;
 	std::string* str;
-	unsigned int j;
-	unsigned int i;
 
 	glPushAttrib(GL_COLOR_BUFFER_BIT | GL_LIGHTING_BIT | GL_TEXTURE_BIT);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -94,8 +93,9 @@ void rsText::draw(std::vector<std::string> &strvec){
 		glDisable(GL_LIGHTING);
 		glBindTexture(GL_TEXTURE_2D, texture);
 		glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
-		for(j=0; j<strvec.size(); j++){
+		for(unsigned int j=0; j<strvec.size(); ++j){
 			str = &(strvec[j]);
+			unsigned int i;
 			for(i=0; i<str->length(); ++i){
 				// Character set only includes 128 characters starting
 				// with ASCII number 32

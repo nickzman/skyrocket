@@ -1,11 +1,12 @@
 /*
- * Copyright (C) 1999-2005  Terence M. Welsh
+ * Copyright (C) 1999-2010  Terence M. Welsh
  *
  * This file is part of Skyrocket.
  *
  * Skyrocket is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 as 
- * published by the Free Software Foundation.
+ * it under the terms of the GNU General Public License as published
+ * by the Free Software Foundation; either version 2 of the License,
+ * or (at your option) any later version.
  *
  * Skyrocket is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -135,6 +136,7 @@ SoundEngine::~SoundEngine(){
 	alcCloseDevice(device);
 }
 
+
 void SoundEngine::insertSoundNode(int sound, rsVec source, rsVec observer){
 	rsVec dir = observer - source;
 
@@ -171,7 +173,7 @@ void SoundEngine::update(float* listenerPos, float* listenerVel, float* listener
 
 	// Set current listener attributes
 	alListenerfv(AL_POSITION, listenerPos);
-	//alListenerfv(AL_VELOCITY, listenerVel);
+	alListenerfv(AL_VELOCITY, listenerVel);
 	alListenerfv(AL_ORIENTATION, listenerOri);
 
 	for(int i=0; i<NUM_SOUNDNODES; ++i){

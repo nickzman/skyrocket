@@ -1,11 +1,12 @@
 /*
- * Copyright (C) 1999-2005  Terence M. Welsh
+ * Copyright (C) 1999-2010  Terence M. Welsh
  *
  * This file is part of Skyrocket.
  *
  * Skyrocket is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 as 
- * published by the Free Software Foundation.
+ * it under the terms of the GNU General Public License as published
+ * by the Free Software Foundation; either version 2 of the License,
+ * or (at your option) any later version.
  *
  * Skyrocket is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -48,22 +49,22 @@ void particle::randomColor(rsVec& color){
 
 	switch(rsRandi(6)){
 	case 0:
-		i=0; j=1, k=2;
+		i=0; j=1; k=2;
 		break;
 	case 1:
-		i=0; j=2, k=1;
+		i=0; j=2; k=1;
 		break;
 	case 2:
-		i=1; j=0, k=2;
+		i=1; j=0; k=2;
 		break;
 	case 3:
-		i=1; j=2, k=0;
+		i=1; j=2; k=0;
 		break;
 	case 4:
-		i=2; j=0, k=1;
+		i=2; j=0; k=1;
 		break;
 	case 5:
-		i=2; j=1, k=0;
+		i=2; j=1; k=0;
 	}
 
 	color[i] = 1.0f;
@@ -692,6 +693,7 @@ void particle::initExplosion(SkyrocketSaverSettings *inSettings){
 	life = 1.0f;
 	size = 100.0f;
 	makeSmoke = 0;
+	const float num_part_scale = 1.5f;
 
 	// Don't do massive explosions too close to the ground
 	if((explosiontype == 19 || explosiontype == 20) && (xyz[1] < 600.0f))
@@ -702,23 +704,23 @@ void particle::initExplosion(SkyrocketSaverSettings *inSettings){
 	case 0:
 		randomColor(rgb);
 		if(!rsRandi(10))  // big sphere
-			popSphere(225, 1000.0f, rgb, inSettings);
+			popSphere(int(225.0f * num_part_scale), 1000.0f, rgb, inSettings);
 		else  // regular sphere
-			popSphere(175, rsRandf(100.0f) + 400.0f, rgb, inSettings);
+			popSphere(int(175.0f * num_part_scale), rsRandf(100.0f) + 400.0f, rgb, inSettings);
 		break;
 	case 1:
 		randomColor(rgb);
 		if(!rsRandi(10))  // big split sphere
-			popSplitSphere(225, 1000.0f, rgb, inSettings);
+			popSplitSphere(int(225.0f * num_part_scale), 1000.0f, rgb, inSettings);
 		else  // regular split sphere
-			popSplitSphere(175, rsRandf(100.0f) + 400.0f, rgb, inSettings);
+			popSplitSphere(int(175.0f * num_part_scale), rsRandf(100.0f) + 400.0f, rgb, inSettings);
 		break;
 	case 2:
 		rgb.set(1.0f, 1.0f, 1.0f);
 		if(!rsRandi(10))  // big multicolored sphere
-			popMultiColorSphere(225, 1000.0f, inSettings);
+			popMultiColorSphere(int(225.0f * num_part_scale), 1000.0f, inSettings);
 		else  // regular multicolored sphere
-			popMultiColorSphere(175, rsRandf(100.0f) + 400.0f, inSettings);
+			popMultiColorSphere(int(175.0f * num_part_scale), rsRandf(100.0f) + 400.0f, inSettings);
 		break;
 	case 3:  // ring
 		randomColor(rgb);
@@ -727,46 +729,46 @@ void particle::initExplosion(SkyrocketSaverSettings *inSettings){
 	case 4:  // double sphere
 		randomColor(rgb);
 		randomColor(rgb2);
-		popSphere(90, rsRandf(50.0f) + 200.0f, rgb2, inSettings);
-		popSphere(150, rsRandf(100.0f) + 500.0f, rgb, inSettings);
+		popSphere(int(90.0f * num_part_scale), rsRandf(50.0f) + 200.0f, rgb2, inSettings);
+		popSphere(int(150.0f * num_part_scale), rsRandf(100.0f) + 500.0f, rgb, inSettings);
 		break;
 	case 5:  // sphere and ring
 		randomColor(rgb);
 		randomColor(rgb2);
-		popRing(80, rsRandf(100.0f) + 500.0f, rgb2, inSettings);
-		popSphere(150, rsRandf(50.0f) + 200.0f, rgb, inSettings);
+		popRing(int(80.0f * num_part_scale), rsRandf(100.0f) + 500.0f, rgb2, inSettings);
+		popSphere(int(150.0f * num_part_scale), rsRandf(50.0f) + 200.0f, rgb, inSettings);
 		break;
 	case 6:  // Sphere of streamers
 		randomColor(rgb);
-		popStreamers(40, rsRandf(100.0f) + 400.0f, rgb, inSettings);
+		popStreamers(int(40.0f * num_part_scale), rsRandf(100.0f) + 400.0f, rgb, inSettings);
 		break;
 	case 7:  // Sphere of meteors
 		randomColor(rgb);
-		popMeteors(40, rsRandf(100.0f) + 400.0f, rgb, inSettings);
+		popMeteors(int(40.0f * num_part_scale), rsRandf(100.0f) + 400.0f, rgb, inSettings);
 		break;
 	case 8:  // Small sphere of stars and large sphere of streamers
 		randomColor(rgb);
 		randomColor(rgb2);
-		popStreamers(30, rsRandf(100.0f) + 500.0f, rgb, inSettings);
-		popSphere(90, rsRandf(50.0f) + 200.0f, rgb2, inSettings);
+		popStreamers(int(30.0f * num_part_scale), rsRandf(100.0f) + 500.0f, rgb, inSettings);
+		popSphere(int(90.0f * num_part_scale), rsRandf(50.0f) + 200.0f, rgb2, inSettings);
 		break;
 	case 9:  // Small sphere of stars and large sphere of meteors
 		randomColor(rgb);
 		randomColor(rgb2);
-		popMeteors(30, rsRandf(100.0f) + 500.0f, rgb, inSettings);
-		popSphere(90, rsRandf(50.0f) + 200.0f, rgb2, inSettings);
+		popMeteors(int(30.0f * num_part_scale), rsRandf(100.0f) + 500.0f, rgb, inSettings);
+		popSphere(int(90.0f * num_part_scale), rsRandf(50.0f) + 200.0f, rgb2, inSettings);
 		break;
 	case 10:  // Sphere of streamers inside sphere of stars
 		randomColor(rgb);
 		randomColor(rgb2);
-		popStreamers(30, rsRandf(100.0f) + 450.0f, rgb, inSettings);
-		popSphere(150, rsRandf(50.0f) + 500.0f, rgb2, inSettings);
+		popStreamers(int(30.0f * num_part_scale), rsRandf(100.0f) + 450.0f, rgb, inSettings);
+		popSphere(int(150.0f * num_part_scale), rsRandf(50.0f) + 500.0f, rgb2, inSettings);
 		break;
 	case 11:  // Sphere of meteors inside sphere of stars
 		randomColor(rgb);
 		randomColor(rgb2);
-		popMeteors(30, rsRandf(100.0f) + 450.0f, rgb, inSettings);
-		popSphere(150, rsRandf(50.0f) + 500.0f, rgb2, inSettings);
+		popMeteors(int(30.0f * num_part_scale), rsRandf(100.0f) + 450.0f, rgb, inSettings);
+		popSphere(int(150.0f * num_part_scale), rsRandf(50.0f) + 500.0f, rgb2, inSettings);
 		break;
 	case 12:  // a few bombs that fall and explode into stars
 		randomColor(rgb);
@@ -781,11 +783,11 @@ void particle::initExplosion(SkyrocketSaverSettings *inSettings){
 		popMeteorPoppers(8, rsRandf(100.0f) + 300.0f, rgb, inSettings);
 		break;
 	case 15:  // lots of little falling firecrackers
-		popLittlePoppers(250, rsRandf(50.0f) + 150.0f, inSettings);
+		popLittlePoppers(int(250.0f * num_part_scale), rsRandf(50.0f) + 150.0f, inSettings);
 		break;
 	case 16:
 		randomColor(rgb);
-		popBees(50, 10.0f, rgb, inSettings);
+		popBees(int(50.0f * num_part_scale), 10.0f, rgb, inSettings);
 		break;
 	case 17:  // Boom!  (loud noise and flash of light)
 		rgb.set(1.0f, 1.0f, 1.0f);
@@ -801,7 +803,7 @@ void particle::initExplosion(SkyrocketSaverSettings *inSettings){
 		initStretcher(inSettings);
 		break;
 	case 100:  // these three are little explosions for poppers
-		popSphere(30, 100.0f, rgb, inSettings);
+		popSphere(int(30.0f * num_part_scale), 100.0f, rgb, inSettings);
 		break;
 	case 101:
 		popStreamers(10, 100.0f, rgb, inSettings);
@@ -1319,19 +1321,19 @@ void particle::update(SkyrocketSaverSettings *inSettings){
 		// distance streamer traveled since last frame
 		sparkTrailLength += diff.length();
 		// number of sparks to release each frame
-		int sparks = int(sparkTrailLength * 0.04f);
-		sparkTrailLength -= float(sparks) * 25.0f;
+		int sparks = int(sparkTrailLength * 0.1f);
+		sparkTrailLength -= float(sparks) * 10.0f;
 		for(i=0; i<sparks; ++i){
 			newp = addParticle(inSettings);
 			newp->initStar(inSettings);
 			newp->xyz = xyz - (diff * rsRandf(1.0f));
-			newp->vel.set(vel[0] + rsRandf(80.0f) - 40.0f,
-				vel[1] + rsRandf(80.0f) - 40.0f,
-				vel[2] + rsRandf(80.0f) - 40.0f);
-			newp->drag = 2.5f;
-			newp->size = rsRandf(8.0f) + 4.0f;
-			newp->rgb.set(1.0f, 0.8f, 0.6f);
-			newp->t = rsRandf(2.0f) + 1.0f;
+			newp->vel.set(vel[0] + rsRandf(50.0f) - 25.0f, 
+				vel[1] + rsRandf(50.0f) - 25.0f, 
+				vel[2] + rsRandf(50.0f) - 25.0f);
+			newp->rgb.set(1.0f, 0.7f, 0.4f);
+			newp->size = rsRandf(5.0f) + 5.0f;
+			newp->drag = 2.0f;
+			newp->t = newp->tr = rsRandf(2.0f) + 1.0f;
 			newp->tr = newp->t;
 			newp->makeSmoke = 0;
 		}
@@ -1340,28 +1342,24 @@ void particle::update(SkyrocketSaverSettings *inSettings){
 	// trail from meteors
 	if(type == METEOR){
 		rsVec diff = xyz - lastxyz;
-		// distance rocket traveled since last frame
+		// distance meteor traveled since last frame
 		sparkTrailLength += diff.length();
 		// number of sparks to release
 		int sparks = int(sparkTrailLength * 0.1f);
-		rsVec smkpos = lastxyz;
-		// release star every 10 feet
-		float multiplier = 10.0f / sparkTrailLength;
+		sparkTrailLength -= float(sparks) * 10.0f;
 		for(i=0; i<sparks; ++i){
-			smkpos += diff * multiplier;
 			newp = addParticle(inSettings);
 			newp->initStar(inSettings);
-			newp->xyz = smkpos;
-			newp->vel.set(vel[0] + rsRandf(40.0f) - 20.0f, 
-				vel[1] + rsRandf(40.0f) - 20.0f, 
-				vel[2] + rsRandf(40.0f) - 20.0f);
+			newp->xyz = xyz - (diff * rsRandf(1.0f));
+			newp->vel.set(vel[0] + rsRandf(100.0f) - 50.0f,
+				vel[1] + rsRandf(100.0f) - 50.0f,
+				vel[2] + rsRandf(100.0f) - 50.0f);
 			newp->rgb = rgb;
+			newp->size = rsRandf(5.0f) + 5.0f;
 			newp->drag = 2.0f;
 			newp->t = newp->tr = rsRandf(0.5f) + 1.5f;
-			newp->size = 10.0f;
 			newp->makeSmoke = 0;
 		}
-		sparkTrailLength -= float(sparks) * 10.0f;
 	}
 
 	// trail from bees

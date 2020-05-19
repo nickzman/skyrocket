@@ -1,11 +1,12 @@
 /*
- * Copyright (C) 2005  Terence M. Welsh
+ * Copyright (C) 2005-2010  Terence M. Welsh
  *
  * This file is part of rsText.
  *
  * rsText is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
- * License version 2.1 as published by the Free Software Foundation.
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
  *
  * rsText is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -29,8 +30,8 @@
 #include <vector>
 #include <string>
 #include <sstream>
-/*#include <gl/gl.h>
-#include <gl/glu.h>*/
+/*#include <GL/gl.h>
+#include <GL/glu.h>*/
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
 
@@ -49,10 +50,10 @@ public:
 
 
 
-template< class T> inline std::string to_string( const T & Value){
-    std::stringstream streamOut;
-    streamOut << Value;
-    return streamOut.str( );
+template<class T> inline std::string to_string(const T & Value){
+    std::stringstream ss;
+    ss << Value;
+    return ss.str();
 }
 
 

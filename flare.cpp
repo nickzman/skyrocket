@@ -1,11 +1,12 @@
 /*
- * Copyright (C) 1999-2005  Terence M. Welsh
+ * Copyright (C) 1999-2010  Terence M. Welsh
  *
  * This file is part of Skyrocket.
  *
  * Skyrocket is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 as 
- * published by the Free Software Foundation.
+ * it under the terms of the GNU General Public License as published
+ * by the Free Software Foundation; either version 2 of the License,
+ * or (at your option) any later version.
  *
  * Skyrocket is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -20,7 +21,6 @@
 
 //#include <Skyrocket/flare.h>
 #include "flare.h"
-#include <bits/stl_algobase.h>
 #include "Skyrocket.h"
 
 using std::max;
@@ -29,7 +29,7 @@ unsigned char flare1[FLARESIZE][FLARESIZE][4];
 unsigned char flare2[FLARESIZE][FLARESIZE][4];
 unsigned char flare3[FLARESIZE][FLARESIZE][4];
 unsigned char flare4[FLARESIZE][FLARESIZE][4];
-GLuint flaretex[4];
+unsigned int flaretex[4];
 
 
 // Generate textures for lens flares
@@ -54,7 +54,7 @@ void initFlares(SkyrocketSaverSettings *inSettings){
 				temp = 1.0f;
 			if(temp < 0.0f)
 				temp = 0.0f;
-			flare1[i][j][3] = (unsigned char)(255.0f * temp * temp);
+			flare1[i][j][3] = (unsigned char)(255.0f * temp * temp * temp * temp);
 		}
 	}
 	glBindTexture(GL_TEXTURE_2D, flaretex[0]);
@@ -99,8 +99,7 @@ void initFlares(SkyrocketSaverSettings *inSettings){
 				temp = 1.0f;
 			if(temp < 0.0f)
 				temp = 0.0f;
-			temp = temp * temp * temp * temp;
-			flare3[i][j][3] = (unsigned char)(255.0f * temp);
+			flare3[i][j][3] = (unsigned char)(255.0f * temp * temp * temp * temp);
 		}
 	}
 	glBindTexture(GL_TEXTURE_2D, flaretex[2]);

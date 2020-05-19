@@ -1,11 +1,12 @@
 /*
- * Copyright (C) 1999-2005  Terence M. Welsh
+ * Copyright (C) 1999-2010  Terence M. Welsh
  *
  * This file is part of Skyrocket.
  *
  * Skyrocket is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 as 
- * published by the Free Software Foundation.
+ * it under the terms of the GNU General Public License as published
+ * by the Free Software Foundation; either version 2 of the License,
+ * or (at your option) any later version.
  *
  * Skyrocket is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -47,7 +48,6 @@
 #include <time.h>
 #include <vector>
 #include <list>
-#include "resource.h"
 #include <stdlib.h>
 #include "rsMath.h"
 #include "particle.h"
@@ -65,6 +65,8 @@
 // Window variables
 /*int xsize, ysize, centerx, centery;
 float aspectRatio;*/
+float gWidth, gHeight;
+float gFov, gHFov;
 // Camera variables
 /*static rsVec lookFrom[3];  // 3 = position, target position, last position
 static rsVec lookAt[3]  // 3 = position, target position, last position
@@ -384,9 +386,18 @@ void randomLookFrom(int n, SkyrocketSaverSettings *inSettings){
 
 
 void randomLookAt(int n, SkyrocketSaverSettings *inSettings){
-	inSettings->lookAt[n][0] = rsRandf(1600.0f) - 800.0f;
+	// look left or right some amount within HFov.  This way, if there is a really
+	// wide FOV due to a wide screen or multiple monitors, the action will appear off
+	// to the sides sometimes.
+	float shift_angle = (gHFov * 0.5f) - 15.0f;
+	if(shift_angle < 0.0f)
+		shift_angle = 0.0f;
+	const float shift = tanf(shift_angle / RS_RAD2DEG);
+	const float shift_x = -(inSettings->lookFrom[n][2]) * shift;
+	const float shift_z = inSettings->lookFrom[n][0] * shift;
+	inSettings->lookAt[n][0] = rsRandf(shift_x * 2.0f) - shift_x;
 	inSettings->lookAt[n][1] = rsRandf(800.0f) + 200.0f;
-	inSettings->lookAt[n][2] = rsRandf(1600.0f) - 800.0f;
+	inSettings->lookAt[n][2] = rsRandf(shift_z * 2.0f) - shift_z;
 }
 
 
@@ -400,6 +411,22 @@ void findHeadingAndPitch(rsVec lookFrom, rsVec lookAt, float& heading, float& pi
 }
 
 
+void reshape(SkyrocketSaverSettings *inSettings){
+	// build viewing matrix
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	if(inSettings->aspectRatio > 1.0f){
+		gHFov = 2.0f * RS_RAD2DEG * atanf(tanf(gFov * 0.5f / RS_RAD2DEG) * inSettings->aspectRatio);
+		gluPerspective(gFov, inSettings->aspectRatio, 1.0f, 40000.0f);
+	}
+	else{
+		gHFov = gFov;
+		gluPerspective(2.0f * RS_RAD2DEG * atanf(tanf(gFov * 0.5f / RS_RAD2DEG) / inSettings->aspectRatio), inSettings->aspectRatio, 1.0f, 40000.0f);
+	}
+	glGetDoublev(GL_PROJECTION_MATRIX, inSettings->projMat);
+}
+
+
 __private_extern__ void draw(SkyrocketSaverSettings * inSettings){
 	/*static float cameraAngle = 0.0f;
 	static const float firstHeading = rsRandf(2.0f * PIx2);
@@ -407,7 +434,6 @@ __private_extern__ void draw(SkyrocketSaverSettings * inSettings){
 	static int lastCameraMode = inSettings->kCamera;
 	static float cameraTime[3]  // time, elapsed time, step (1.0 - 0.0)
 		= {20.0f, 0.0f, 0.0f};
-	static float fov = 60.0f;
 	static float zoom = 0.0f;  // For interpolating from regular camera view to zoomed in view
 	static float zoomTime[2] = {300.0f, 0.0f};  // time until next zoom, duration of zoom
 	static float heading, pitch;
@@ -426,20 +452,16 @@ __private_extern__ void draw(SkyrocketSaverSettings * inSettings){
 	if(!superFast)
 		inSettings->frameTime *= 5.0f;
 
-	// build viewing matrix
-	/*glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	gluPerspective(60.0f, aspectRatio, 1.0f, 40000.0f);
-	glGetDoublev(GL_PROJECTION_MATRIX, projMat);*/
-
 	////////////////////////////////
 	// update camera
 	///////////////////////////////
 	//static int first = 1;
 	if(inSettings->first){
 		randomLookFrom(1, inSettings);  // new target position
+		randomLookAt(1, inSettings);
 		// starting camera view is very far away
 		inSettings->lookFrom[2] = rsVec(rsRandf(1000.0f) + 6000.0f, 5.0f, rsRandf(4000.0f) - 2000.0f);
+		randomLookAt(2, inSettings);
 		inSettings->textwriter = new rsText;
 		inSettings->first = 0;
 	}
@@ -484,7 +506,7 @@ __private_extern__ void draw(SkyrocketSaverSettings * inSettings){
 			randomLookAt(1, inSettings);  // new target position
 			if(!rsRandi(4) && zoom == 0.0f){  // possibly cut to new view if camera isn't zoomed in
 				randomLookFrom(2, inSettings);  // new last position
-				randomLookFrom(2, inSettings);  // new last position
+				randomLookAt(2, inSettings);
 			}
 		}
 		// change camera position and angle
@@ -596,15 +618,11 @@ __private_extern__ void draw(SkyrocketSaverSettings * inSettings){
 	// Interpolate fov, heading, and pitch using zoom value
 	// zoom of {0,1} maps to fov of {60,6}
 	const float t(0.5f * (1.0f - cosf(RS_PI * zoom)));
-	fov = 60.0f - 54.0f * t;
+	gFov = 60.0f - 54.0f * t;
 	heading = zoomHeading * t + heading * (1.0f - t);
 	pitch = zoomPitch * t + pitch * (1.0f - t);
 
-	// build viewing matrix
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	gluPerspective(fov, inSettings->aspectRatio, 1.0f, 40000.0f);
-	glGetDoublev(GL_PROJECTION_MATRIX, inSettings->projMat);
+	reshape(inSettings);
 
 	// Build modelview matrix
 	glMatrixMode(GL_MODELVIEW);
@@ -664,6 +682,7 @@ __private_extern__ void draw(SkyrocketSaverSettings * inSettings){
 
 		// Change rocket firing rate
 		static float rocketTimer = 0.0f;
+		// a rocket usually lasts about 10 seconds, so fastest rate is all rockets within 10 seconds
 		static float rocketTimeConst = 10.0f / float(inSettings->dMaxrockets);
 		static float changeRocketTimeConst = 20.0f;
 		changeRocketTimeConst -= inSettings->frameTime;
@@ -904,10 +923,6 @@ void initSaver(int width, int height,SkyrocketSaverSettings * inSettings){
 
 	// Initialize pseudorandom number generator
 	srand((unsigned)time(NULL));
-	rand(); rand(); rand(); rand(); rand();
-	rand(); rand(); rand(); rand(); rand();
-	rand(); rand(); rand(); rand(); rand();
-	rand(); rand(); rand(); rand(); rand();
 	
 	// NZ: Set up defaults in inSettings:
 	inSettings->readyToDraw = 0;
@@ -939,7 +954,10 @@ void initSaver(int width, int height,SkyrocketSaverSettings * inSettings){
 	glGetIntegerv(GL_VIEWPORT, inSettings->viewport);
 	inSettings->aspectRatio = float(width) / float(height);
 
-	//glMatrixMode(GL_MODELVIEW_MATRIX);
+	/*glViewport(0, 0, rect.right, rect.bottom);
+	aspectRatio = float(rect.right) / float(rect.bottom);*/
+	gFov = 60.0;
+	reshape(inSettings);
 
 	// Set OpenGL state
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -1146,6 +1164,9 @@ long ScreenSaverProc(unsigned int msg, unsigned int wpm, unsigned long lpm, Skyr
 				case 'P':
 					//case 's':  These are used by rsWin32Saver
 					//case 'S':  to toggle kStatistics
+				case 's': case 'S':	// change by NZ - except on macOS, where we have to do this ourselves
+					inSettings->kStatistics = !(inSettings->kStatistics);
+					return (0);
 				case 'v':
 				case 'V':
 				case 'x':

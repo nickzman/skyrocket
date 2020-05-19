@@ -1,0 +1,93 @@
+
+/* Class = "NSWindow"; title = "Panel"; ObjectID = "5"; */
+"5.title" = "Panel";
+
+/* Class = "NSButtonCell"; title = "Close"; ObjectID = "361"; */
+"361.title" = "閉じる";
+
+/* Class = "NSTextFieldCell"; title = "Skyrocket"; ObjectID = "362"; */
+"362.title" = "Skyrocket";
+
+/* Class = "NSTextFieldCell"; title = "DON'T CHANGE"; ObjectID = "363"; */
+"363.title" = "DON'T CHANGE";
+
+/* Class = "NSTextFieldCell"; title = "Copyright © 2001-2010 Terry Welsh"; ObjectID = "364"; */
+"364.title" = "著作権 © 2001-2010 Terry Welsh";
+
+/* Class = "NSTextFieldCell"; title = "Ported to Mac OS X by Jason Sonnenschein and Nick Zitzmann\nwith help from Stéphane Sudre and the rss_glx project"; ObjectID = "365"; */
+"365.title" = "Mac OS X への移植は Jason Sonnenschein 氏と Nick Zitzmann 氏によって\n行われました。Stéphane Sudre 氏と rss_glx プロジェクトの皆様に感謝します。";
+
+/* Class = "NSButtonCell"; title = "Main screen only"; ObjectID = "366"; */
+"366.title" = "メインスクリーンのみ";
+
+/* Class = "NSButtonCell"; title = "Reset"; ObjectID = "367"; */
+"367.title" = "リセット";
+
+/* Class = "NSTextFieldCell"; title = "Ambient light:"; ObjectID = "369"; */
+"369.title" = "周辺光：";
+
+/* Class = "NSTextFieldCell"; title = "Amount of smoke in explosions:"; ObjectID = "370"; */
+"370.title" = "爆発煙の量：";
+
+/* Class = "NSTextFieldCell"; title = "Smoke lifespan (in seconds):"; ObjectID = "371"; */
+"371.title" = "煙が消えるまでの時間（秒）：";
+
+/* Class = "NSTextFieldCell"; title = "Maximum number of rockets:"; ObjectID = "372"; */
+"372.title" = "打ち上げ花火の最大数：";
+
+/* Class = "NSTextFieldCell"; title = "Wind speed:"; ObjectID = "373"; */
+"373.title" = "風速：";
+
+/* Class = "NSTextFieldCell"; title = "Moon glow brightness:"; ObjectID = "374"; */
+"374.title" = "月光の明るさ：";
+
+/* Class = "NSTextFieldCell"; title = "Lens flare brightness:"; ObjectID = "375"; */
+"375.title" = "レンズフレアの明るさ：";
+
+/* Class = "NSTextFieldCell"; title = "Star density:"; ObjectID = "376"; */
+"376.title" = "星の密度：";
+
+/* Class = "NSTextFieldCell"; title = "#"; ObjectID = "384"; */
+"384.title" = "#";
+
+/* Class = "NSTextFieldCell"; title = "#"; ObjectID = "385"; */
+"385.title" = "#";
+
+/* Class = "NSTextFieldCell"; title = "#"; ObjectID = "386"; */
+"386.title" = "#";
+
+/* Class = "NSTextFieldCell"; title = "#"; ObjectID = "387"; */
+"387.title" = "#";
+
+/* Class = "NSTextFieldCell"; title = "#"; ObjectID = "388"; */
+"388.title" = "#";
+
+/* Class = "NSTextFieldCell"; title = "#"; ObjectID = "389"; */
+"389.title" = "#";
+
+/* Class = "NSButtonCell"; title = "Earth"; ObjectID = "390"; */
+"390.title" = "地球";
+
+/* Class = "NSButtonCell"; title = "Moon"; ObjectID = "391"; */
+"391.title" = "月";
+
+/* Class = "NSButtonCell"; title = "Illumination"; ObjectID = "392"; */
+"392.title" = "照明";
+
+/* Class = "NSTextFieldCell"; title = "#"; ObjectID = "394"; */
+"394.title" = "#";
+
+/* Class = "NSButtonCell"; title = "Clouds"; ObjectID = "395"; */
+"395.title" = "雲";
+
+/* Class = "NSButtonCell"; title = "Camera angle changes"; ObjectID = "396"; */
+"396.title" = "カメラの角度が変わる";
+
+/* Class = "NSTextFieldCell"; title = "#"; ObjectID = "398"; */
+"398.title" = "#";
+
+/* Class = "NSTextFieldCell"; title = "Sound volume:"; ObjectID = "399"; */
+"399.title" = "音量：";
+
+/* Class = "NSButtonCell"; title = "Slow motion"; ObjectID = "400"; */
+"400.title" = "スローモーション";

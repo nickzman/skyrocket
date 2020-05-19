@@ -4,7 +4,6 @@
 
 #import "RSSSkyrocketSaverView.h"
 #include "Skyrocket.h"
-#include "resource.h"
 #include <sys/time.h>
 #import <OpenGL/OpenGL.h>
 
@@ -35,30 +34,25 @@
     
     if (self)
     {
-#ifdef __ppc__
-		long osVersion;
-		
-		Gestalt(gestaltSystemVersion, &osVersion);
-		soundDisabled_ = (osVersion < 0x1050);
-#else
 		soundDisabled_ = NO;
-#endif
         if (mainScreenOnly_!=NSOnState || mainScreen_==YES)
         {
             NSOpenGLPixelFormatAttribute attribs[] = 
             {
-				NSOpenGLPFAAccelerated, (NSOpenGLPixelFormatAttribute)YES,
-				NSOpenGLPFADoubleBuffer, (NSOpenGLPixelFormatAttribute)YES,
-				NSOpenGLPFAMinimumPolicy, (NSOpenGLPixelFormatAttribute)YES,
+				NSOpenGLPFAAccelerated,
+				NSOpenGLPFADoubleBuffer,
+				NSOpenGLPFAMinimumPolicy,
+				NSOpenGLPFAAllowOfflineRenderers,
 				(NSOpenGLPixelFormatAttribute)0
             };
             
-            NSOpenGLPixelFormat *format = [[[NSOpenGLPixelFormat alloc] initWithAttributes:attribs] autorelease];
+            NSOpenGLPixelFormat *format = [[NSOpenGLPixelFormat alloc] initWithAttributes:attribs];
             
             if (format!=nil)
             {
-                _view = [[[NSOpenGLView alloc] initWithFrame:NSZeroRect pixelFormat:format] autorelease];
+                _view = [[NSOpenGLView alloc] initWithFrame:NSZeroRect pixelFormat:format];
                 [self addSubview:_view];
+				_view.wantsBestResolutionOpenGLSurface = YES;	// enable Retina support
             
                 settings_.frameTime=0;
                 
@@ -68,8 +62,7 @@
                 {
                     [self readDefaults:defaults];
                 }
-                
-                [self setAnimationTimeInterval:0.03];
+				self.animationTimeInterval = 1.0/60.0;
             }
         }
     }
@@ -97,8 +90,6 @@
             [tParagraphStyle setAlignment:NSCenterTextAlignment];
             
             tAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[NSFont systemFontOfSize:[NSFont systemFontSize]],NSFontAttributeName,[NSColor whiteColor],NSForegroundColorAttributeName,tParagraphStyle,NSParagraphStyleAttributeName,nil];
-            
-            [tParagraphStyle release];
             
             tString=NSLocalizedStringFromTableInBundle(@"Minimum OpenGL requirements\rfor this Screen Effect\rnot available\ron your graphic card.",@"Localizable",[NSBundle bundleForClass:[self class]],@"No comment");
             
@@ -169,7 +160,7 @@
     {
         if (mainScreenOnly_!=NSOnState || mainScreen_==YES)
         {
-            NSSize tSize;
+			NSSize tSize = [_view convertSizeToBacking:_view.frame.size];
             struct timeval tTime;
             int i;
 			GLint interval = 1;
@@ -183,15 +174,13 @@
             CGLSetParameter(CGLGetCurrentContext(), kCGLCPSwapInterval, &interval);	// don't allow screen tearing
             [[_view openGLContext] flushBuffer];
             
-            tSize=[_view frame].size;
-            
             //cleanSettings(&settings_);
 			
             initSaver((int) tSize.width,(int) tSize.height,&settings_);
 
             for(i=0;i<10;i++)
             {
-                times[i]=0.03f;
+				times[i] = self.animationTimeInterval;
             }
 
             timeindex = 0;
@@ -365,7 +354,7 @@
     
     if (IBconfigureSheet_ == nil)
     {
-        [NSBundle loadNibNamed:@"ConfigureSheet" owner:self];
+		[[NSBundle bundleWithIdentifier:@"com.reallyslick.Skyrocket"] loadNibNamed:@"ConfigureSheet" owner:self topLevelObjects:NULL];
         
         [IBversion_ setStringValue:[[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleVersion"]];
         
