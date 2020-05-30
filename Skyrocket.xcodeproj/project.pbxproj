@@ -362,6 +362,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1140;
+				TargetAttributes = {
+					8D255AC50486D3F9007BF209 = {
+						DevelopmentTeam = 8D98N325TG;
+					};
+				};
 			};
 			buildConfigurationList = E067864E09998D3400A2DC93 /* Build configuration list for PBXProject "Skyrocket" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -481,7 +486,8 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "";
+				DEVELOPMENT_TEAM = 8D98N325TG;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_TRIGRAPHS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -490,7 +496,6 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
 				GCC_WARN_UNKNOWN_PRAGMAS = NO;
-				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				LIBRARY_SEARCH_PATHS = (
@@ -500,7 +505,6 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reallyslick.Skyrocket;
 				PRODUCT_NAME = Skyrocket;
-				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -516,10 +520,12 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "";
+				DEVELOPMENT_TEAM = 8D98N325TG;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_ENABLE_TRIGRAPHS = NO;
 				GCC_FAST_MATH = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -527,7 +533,6 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
 				GCC_WARN_UNKNOWN_PRAGMAS = NO;
-				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				LIBRARY_SEARCH_PATHS = (
@@ -537,7 +542,6 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reallyslick.Skyrocket;
 				PRODUCT_NAME = Skyrocket;
-				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
