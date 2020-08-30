@@ -26,7 +26,8 @@
 
 #define SMOKETEXSIZE 64
 
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wmissing-braces"
 
 unsigned char presmoke1[SMOKETEXSIZE][SMOKETEXSIZE] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,2,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,3,6,5,4,
@@ -472,6 +473,6 @@ unsigned char presmoke5[SMOKETEXSIZE][SMOKETEXSIZE] = {0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 };
 
-
+#pragma clang diagnostic pop
 
 #endif  // SMOKETEX_H

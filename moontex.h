@@ -26,7 +26,8 @@
 
 #define MOONTEXSIZE 64
 
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wmissing-braces"
 
 unsigned char moonmap[MOONTEXSIZE][MOONTEXSIZE][2] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -202,6 +203,6 @@ unsigned char moonmap[MOONTEXSIZE][MOONTEXSIZE][2] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 };
 
-
+#pragma clang diagnostic pop
 
 #endif

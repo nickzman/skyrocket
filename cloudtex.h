@@ -26,7 +26,8 @@
 
 #define CLOUDTEXSIZE 512
 
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wmissing-braces"
 
 unsigned char cloudmap[CLOUDTEXSIZE][CLOUDTEXSIZE][2] = {
 225,213,226,212,227,215,227,215,228,215,230,223,231,229,234,234,235,236,236,241,238,244,240,246,240,247,239,247,239,246,240,246,241,245,242,242,244,241,245,240,246,239,246,235,246,231,247,227,
@@ -10954,6 +10955,6 @@ unsigned char cloudmap[CLOUDTEXSIZE][CLOUDTEXSIZE][2] = {
 233,197,233,195,233,192,233,187,231,174,229,159,228,151,230,177,230,177,229,165,229,161,230,167,229,160,230,163,232,178,229,194
 };
 
-
+#pragma clang diagnostic pop
 
 #endif

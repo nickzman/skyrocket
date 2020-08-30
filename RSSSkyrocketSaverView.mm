@@ -50,7 +50,7 @@
             
             if (format!=nil)
             {
-                _view = [[NSOpenGLView alloc] initWithFrame:NSZeroRect pixelFormat:format];
+                _view = [[NSOpenGLView alloc] initWithFrame:CGRectMake(0.0, 0.0, frameRect.size.width, frameRect.size.height) pixelFormat:format];
                 [self addSubview:_view];
 				_view.wantsBestResolutionOpenGLSurface = YES;	// enable Retina support
             
@@ -354,7 +354,7 @@
     
     if (IBconfigureSheet_ == nil)
     {
-		[[NSBundle bundleWithIdentifier:@"com.reallyslick.Skyrocket"] loadNibNamed:@"ConfigureSheet" owner:self topLevelObjects:NULL];
+		[[NSBundle bundleForClass:self.class] loadNibNamed:@"ConfigureSheet" owner:self topLevelObjects:NULL];
         
         [IBversion_ setStringValue:[[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleVersion"]];
         

@@ -9,6 +9,9 @@
 unsigned int rocketlist;
 extern int dAmbient;
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wmissing-braces"
+
 unsigned char rocketmap[ROCKETTEXSIZE][ROCKETTEXSIZE][3] = {
 226,50,2,223,52,6,224,52,6,222,52,7,227,49,3,224,54,5,222,51,7,203,44,4,216,48,6,227,49,6,225,49,6,227,52,6,226,55,5,226,54,1,227,53,4,225,54,3,
 223,51,6,226,51,9,225,49,3,221,52,6,226,53,3,227,49,3,225,55,5,228,54,8,228,52,6,227,52,8,228,54,5,226,50,6,222,55,7,222,50,5,224,52,4,224,52,4,
@@ -76,6 +79,7 @@ unsigned char rocketmap[ROCKETTEXSIZE][ROCKETTEXSIZE][3] = {
 228,53,7,227,51,4,225,52,5,224,52,6,224,48,6,224,49,6,226,50,5,224,54,3,227,50,3,224,48,5,225,48,3,227,52,3,226,50,3,224,52,8,224,51,8,227,52,2
 };
 
+#pragma clang diagnostic pop
 
 void initRockets(){
 	unsigned int rockettex;

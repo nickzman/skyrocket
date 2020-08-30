@@ -1,7 +1,8 @@
 #ifndef FONTMAP_H
 #define FONTMAP_H
 
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wmissing-braces"
 
 unsigned char fontmap[512][256] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2737,6 +2738,6 @@ unsigned char fontmap[512][256] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 };
 
-
+#pragma clang diagnostic pop
 
 #endif
