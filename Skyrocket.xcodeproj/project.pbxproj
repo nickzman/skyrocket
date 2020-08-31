@@ -31,7 +31,7 @@
 		8D255ACE0486D3F9007BF209 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		8D255ACF0486D3F9007BF209 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F27B2DFFEEEFEF11CA0E56 /* ScreenSaver.framework */; };
 		E00BA3E109AD52EF00B27E07 /* MacHelperFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = E00BA3DF09AD52EF00B27E07 /* MacHelperFunctions.h */; };
-		E00BA3E209AD52EF00B27E07 /* MacHelperFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BA3E009AD52EF00B27E07 /* MacHelperFunctions.m */; };
+		E00BA3E209AD52EF00B27E07 /* MacHelperFunctions.mm in Sources */ = {isa = PBXBuildFile; fileRef = E00BA3E009AD52EF00B27E07 /* MacHelperFunctions.mm */; };
 		E00BA3F009AD564700B27E07 /* boom1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E00BA3E609AD564700B27E07 /* boom1.wav */; };
 		E00BA3F109AD564700B27E07 /* boom2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E00BA3E709AD564700B27E07 /* boom2.wav */; };
 		E00BA3F209AD564700B27E07 /* boom3.wav in Resources */ = {isa = PBXBuildFile; fileRef = E00BA3E809AD564700B27E07 /* boom3.wav */; };
@@ -77,7 +77,7 @@
 		E0E6819224F4831000D79B49 /* rsQuat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25FA17F0060688E2002931FE /* rsQuat.cpp */; };
 		E0E6819324F4831300D79B49 /* rsVec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25FA17F2060688E2002931FE /* rsVec.cpp */; };
 		E0E6819424F4831600D79B49 /* rsVec4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E02D511A247B7AF3008561D1 /* rsVec4.cpp */; };
-		E0E6819524F4831800D79B49 /* MacHelperFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = E00BA3E009AD52EF00B27E07 /* MacHelperFunctions.m */; };
+		E0E6819524F4831800D79B49 /* MacHelperFunctions.mm in Sources */ = {isa = PBXBuildFile; fileRef = E00BA3E009AD52EF00B27E07 /* MacHelperFunctions.mm */; };
 		E0E6819624F4831B00D79B49 /* Skyrocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25FA17A7060686E3002931FE /* Skyrocket.cpp */; };
 		E0E6819724F4831D00D79B49 /* world.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E01B312909A02E5F00499FE9 /* world.cpp */; };
 		E0E6819824F4832000D79B49 /* shockwave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E01B312709A02E4500499FE9 /* shockwave.cpp */; };
@@ -126,7 +126,7 @@
 		8D255AD20486D3F9007BF209 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D255AD30486D3F9007BF209 /* Skyrocket.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Skyrocket.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00BA3DF09AD52EF00B27E07 /* MacHelperFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacHelperFunctions.h; sourceTree = "<group>"; };
-		E00BA3E009AD52EF00B27E07 /* MacHelperFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacHelperFunctions.m; sourceTree = "<group>"; };
+		E00BA3E009AD52EF00B27E07 /* MacHelperFunctions.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MacHelperFunctions.mm; sourceTree = "<group>"; };
 		E00BA3E609AD564700B27E07 /* boom1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom1.wav; sourceTree = "<group>"; };
 		E00BA3E709AD564700B27E07 /* boom2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom2.wav; sourceTree = "<group>"; };
 		E00BA3E809AD564700B27E07 /* boom3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom3.wav; sourceTree = "<group>"; };
@@ -283,7 +283,7 @@
 				E0CE3014099AD55D003559AF /* rsMath */,
 				E01B316009A033B300499FE9 /* rsText */,
 				E00BA3DF09AD52EF00B27E07 /* MacHelperFunctions.h */,
-				E00BA3E009AD52EF00B27E07 /* MacHelperFunctions.m */,
+				E00BA3E009AD52EF00B27E07 /* MacHelperFunctions.mm */,
 				25FA17A8060686E3002931FE /* Skyrocket.h */,
 				25FA17A7060686E3002931FE /* Skyrocket.cpp */,
 				25FA17B406068704002931FE /* world.h */,
@@ -551,7 +551,7 @@
 				E02D511C247B7AF3008561D1 /* rsVec4.cpp in Sources */,
 				E01B316509A033D600499FE9 /* rsText.cpp in Sources */,
 				E01B327609A04AE400499FE9 /* rsMatrix.cpp in Sources */,
-				E00BA3E209AD52EF00B27E07 /* MacHelperFunctions.m in Sources */,
+				E00BA3E209AD52EF00B27E07 /* MacHelperFunctions.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,7 +568,7 @@
 				E0E6819724F4831D00D79B49 /* world.cpp in Sources */,
 				E0E6818024F482FE00D79B49 /* AppDelegate.m in Sources */,
 				E0E6819624F4831B00D79B49 /* Skyrocket.cpp in Sources */,
-				E0E6819524F4831800D79B49 /* MacHelperFunctions.m in Sources */,
+				E0E6819524F4831800D79B49 /* MacHelperFunctions.mm in Sources */,
 				E0A7412624F4BA8C007D055C /* rsText.cpp in Sources */,
 				E0E6819A24F4832600D79B49 /* SoundEngine.cpp in Sources */,
 				E0E6819024F4830B00D79B49 /* RSSSkyrocketSaverView.mm in Sources */,
@@ -810,7 +810,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = net.comcast.home.seiryu.SkyrocketTest;
@@ -852,7 +852,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = net.comcast.home.seiryu.SkyrocketTest;
