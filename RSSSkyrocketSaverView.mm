@@ -115,6 +115,17 @@
     }
 }
 
+
+- (void)viewDidMoveToWindow
+{
+	[super viewDidMoveToWindow];
+	if (@available(macOS 12.0, *))	// on Monterey and later, update the time interval for the window's screen's refresh rate
+	{
+		self.animationTimeInterval = self.window.screen.maximumRefreshInterval;
+	}
+}
+
+
 - (void)animateOneFrame
 {
     if (isConfiguring_==NO && _view!=nil)
